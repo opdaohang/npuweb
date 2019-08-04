@@ -1,0 +1,817 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+  margin: 0;
+  background-color:#4390df;
+  background-image:url(images/bg1.jpg);
+  background-position:bottom center;
+  background-attachment:fixed;
+  background-repeat:no-repeat;
+  font-family:微软雅黑;
+}
+a{
+	text-decoration:none;
+}
+.fw-normal{
+	font-weight:100;
+	font-size:45px;
+	color:#FFF;
+	position:absolute;
+	top:20px;
+}
+.metrouicss{
+}
+.metrouicss .selected {
+  border: 4px #2d89ef solid;
+}
+.metrouicss .selected:after {
+  width: 0;
+  height: 0;
+  border-top: 40px solid #2d89ef;
+  border-left: 40px solid transparent;
+  position: absolute;
+  display: block;
+  right: 0;
+  content: ".";
+  top: 0;
+  z-index: 1001;
+}
+.metrouicss .selected:before {
+  position: absolute;
+  content:url(images/tick.jpg);
+  color: #fff;
+  right: 3px;
+  top:3px;
+  z-index: 1002;
+}
+.metrouicss .page {
+  position: relative;
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+  *zoom: 1;
+}
+.metrouicss .page:before,
+.metrouicss .page:after {
+  display: table;
+  content: "";
+}
+.metrouicss .page:after {
+  clear: both;
+}
+.metrouicss .page .page-header {
+  width: 100%;
+  position: relative;
+  display: block;
+}
+.metrouicss .page.fixed-header .page-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.metrouicss .page .page-header .page-header-content {
+  height: 100px;
+  width: 100%;
+  position: relative;
+  display: block;
+}
+.metrouicss .page .page-header .page-header-content h1,
+.metrouicss .page .page-header .page-header-content h2,
+.metrouicss .page .page-header .page-header-content h3,
+.metrouicss .page .page-header .page-header-content h4,
+.metrouicss .page .page-header .page-header-content h5 {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  left: 20px;
+  bottom: 0;
+}
+.metrouicss .page .page-header .page-header-content .user-login {
+  float: right;
+  width:260px;
+  height:56px;
+  margin: 26px 34px 0 0;
+  cursor: pointer;
+}
+.metrouicss .page .page-header .page-header-content .user-login:hover {	
+  background-color:#6ca9e7;
+}
+.metrouicss .page .page-header .page-header-content .user-login .avatar {
+	float: right;
+	border: 1px #ccc solid;
+	width: 40px;
+	height: 40px;
+    margin: 7px 10px 0 0;
+	background-color:#F90;
+}
+.metrouicss .page .page-header .page-header-content .user-login .avatar img,
+.metrouicss .page .page-header .page-header-content .user-login .avatar [class^="icon-"],
+.metrouicss .page .page-header .page-header-content .user-login .avatar [class*=" icon-"] {
+  width: 100%;
+  height: 100%;
+}
+.metrouicss .page .page-header .page-header-content .user-login .avatar [class^="icon-"],
+.metrouicss .page .page-header .page-header-content .user-login .avatar [class*=" icon-"] {
+  margin-top: 2px;
+  font-size: 30px;
+  line-height: 30px;
+  display: block;
+}
+.metrouicss .page .page-header .page-header-content .user-login .name {
+  float: left;
+  margin: 9px 10px 0 0px;
+  text-align: right;
+}
+.metrouicss .page .page-header .page-header-content .user-login .name .first-name {
+  color:#FFF;
+  font-weight: 100;
+  font-size: 25px;
+  text-decoration:none;
+  display: block;
+  margin-left: 12px;
+}
+.metrouicss .page .page-region {
+  display: block;
+}
+.metrouicss .page .page-region .page-region-content {
+  padding-top: 10px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 20px;
+  display: block;
+  height: 100%;
+  position: relative;
+}
+.metrouicss .page.secondary .page-header .page-header-content h1,
+.metrouicss .page.secondary .page-header .page-header-content h2,
+.metrouicss .page.secondary .page-header .page-header-content h3,
+.metrouicss .page.secondary .page-header .page-header-content h4,
+.metrouicss .page.secondary .page-header .page-header-content h5 {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  left: 120px;
+  bottom: 0;
+}
+.metrouicss .page.secondary .page-region .page-region-content {
+  padding-left: 120px;
+}
+.metrouicss .tile-group {
+  margin: 0 50px 0 0;
+  position:absolute;
+  height:100%;
+  min-height: 1px;
+}
+.metrouicss .tile {
+  display: block;
+  position:absolute;
+  background-color: #79bcff;
+  width: 120px;
+  height: 120px;
+  cursor: pointer;
+  box-shadow: inset 0px 0px 1px #FFFFCC;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 300;
+  font-size: 11pt;
+  letter-spacing: 0.02em;
+  line-height: 14pt;
+  font-smooth: always;
+  margin: 0 10px 10px 0;
+  overflow: hidden;
+}
+.metrouicss .tile:hover {
+  outline: 3px #5b9ee3 solid;
+}
+.metrouicss .tile.double {
+  width: 250px;
+}
+.metrouicss .tile * {
+  color: #ffffff;
+}
+.metrouicss .tile .tile-content {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  padding-bottom: 30px;
+  vertical-align: top;
+  padding: 10px 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+  font-weight: 400;
+  font-size: 9pt;
+  font-smooth: always;
+  line-height: 11pt;
+  color: #000000;
+  color: #ffffff;
+  line-height: 16px;
+}
+.metrouicss .tile .tile-content:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+.metrouicss .tile .tile-content:active {
+  color: rgba(0, 0, 0, 0.4);
+}
+.metrouicss .tile .tile-content:hover {
+  color: #ffffff;
+}
+.metrouicss .tile .tile-content h1,
+.metrouicss .tile .tile-content h2,
+.metrouicss .tile .tile-content h3,
+.metrouicss .tile .tile-content h4,
+.metrouicss .tile .tile-content h5,
+.metrouicss .tile .tile-content h6 {
+  font-size: 14pt;
+}
+.metrouicss .tile .tile-content h1,
+.metrouicss .tile .tile-content h2,
+.metrouicss .tile .tile-content h3,
+.metrouicss .tile .tile-content h4,
+.metrouicss .tile .tile-content h5,
+.metrouicss .tile .tile-content h6,
+.metrouicss .tile .tile-content p {
+  padding: 0;
+  margin: 0;
+  line-height: 24px;
+}
+.metrouicss .tile .tile-content h1:hover,
+.metrouicss .tile .tile-content h2:hover,
+.metrouicss .tile .tile-content h3:hover,
+.metrouicss .tile .tile-content h4:hover,
+.metrouicss .tile .tile-content h5:hover,
+.metrouicss .tile .tile-content h6:hover,
+.metrouicss .tile .tile-content p:hover {
+  color: #ffffff;
+}
+.metrouicss .tile .tile-content p {
+  font-weight: 400;
+  font-size: 9pt;
+  font-smooth: always;
+  line-height: 11pt;
+  color: #000000;
+  color: #ffffff;
+  line-height: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.metrouicss .tile .tile-content p:hover {
+  color: rgba(0, 0, 0, 0.8);
+}
+.metrouicss .tile .tile-content p:active {
+  color: rgba(0, 0, 0, 0.4);
+}
+.metrouicss .tile .tile-content p:hover {
+  color: #ffffff;
+}
+.metrouicss #dialogOverlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(235, 235, 235, 0.5);
+  z-index: 1;
+}
+.metrouicss .dialog {
+  position:fixed;
+  top: 40%;
+  left: 40%;
+  min-width: 150px;
+  min-height: 155px;
+  z-index: 1000;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.metrouicss .dialog .header {
+  font-weight: 200;
+  font-size: 20pt;
+  letter-spacing: 0.01em;
+  line-height: 22pt;
+  font-smooth: always;
+  width: auto;
+  height: 25px;
+  padding: 0px 35px 5px 5px;
+  font-size: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  background-color: #2D89EF;
+  color: #fff;
+  border: 1px solid #2D89EF;
+  border-bottom: 0 none;
+}
+.metrouicss .dialog .header div {
+  position: absolute;
+  right: -5px;
+  top: 5px;
+}
+.metrouicss .dialog .header button {
+  font-weight: 400;
+  font-size: 9pt;
+  font-smooth: always;
+  line-height: 11pt;
+  font-size: 14px;
+  display: inline-block;
+  padding: 4px 12px;
+  line-height: 20px;
+  vertical-align: middle !important;
+  min-width: 90px;
+  background-color: #ccc;
+  border: 1px transparent solid;
+  color: #353535;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-raduis: 0;
+  cursor: pointer;
+  width: auto;
+  *zoom: 1;
+  min-width: 32px;
+  min-height: 32px;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  position: relative;
+  padding: 0;
+  width: 24px !important;
+  height: 24px !important;
+  min-height: 24px;
+  min-width: 24px;
+}
+.metrouicss .dialog .header button.mini {
+  min-height: 20px;
+  min-width: 20px;
+  height: 14px;
+  font-size: .75em !important;
+  padding-top: 0px !important;
+}
+.metrouicss .dialog .header button.big {
+  min-height: 48px;
+  height: 48px;
+  font-size: 1.2em;
+}
+.metrouicss .dialog .header button.mini {
+  min-width: 22px;
+  width: 22px;
+}
+.metrouicss .dialog .header button.big {
+  min-width: 48px;
+  width: 48px;
+}
+.metrouicss .dialog .header button [class^="icon-"],
+.metrouicss .dialog .header button [class*=" icon-"] {
+  vertical-align: -10%;
+  font-size: 1.2em;
+  display: inline-block;
+}
+.metrouicss .dialog .header button [class^="icon-"].icon-large,
+.metrouicss .dialog .header button [class*=" icon-"].icon-large {
+  line-height: .9em;
+}
+.metrouicss .dialog .header button.big [class^="icon-"],
+.metrouicss .dialog .header button.big [class*=" icon-"] {
+  font-size: 1.3333333333333333em;
+}
+.metrouicss .dialog .header button [class^="icon-"],
+.metrouicss .dialog .header button [class*=" icon-"] {
+  margin-right: 5px;
+}
+.metrouicss .dialog .header button [class^="icon-"].right,
+.metrouicss .dialog .header button [class*=" icon-"].right {
+  margin-left: 5px;
+  margin-right: auto;
+}
+.metrouicss .dialog .header button:before,
+.metrouicss .dialog .header button:after {
+  display: table;
+  content: "";
+}
+.metrouicss .dialog .header button:after {
+  clear: both;
+}
+.metrouicss .dialog .header button.standart {
+  min-width: 90px;
+  min-height: 32px;
+}
+.metrouicss .dialog .header button:active,
+.metrouicss .dialog .header button.default:active {
+  top: 1px;
+  left: 1px;
+}
+.metrouicss .dialog .header button:disabled,
+.metrouicss .dialog .header button.disabled {
+  background-color: #eaeaea;
+  color: #bebebe;
+  cursor: not-allowed;
+}
+.metrouicss .dialog .header button.default {
+  background-color: #008287;
+  color: #fff;
+}
+.metrouicss .dialog .header button:focus {
+  outline: 0;
+  border: 1px #353535 dotted;
+}
+.metrouicss .dialog .header button.mini {
+  min-height: 20px;
+  min-width: 20px;
+  height: 14px;
+  font-size: .75em !important;
+  padding-top: 0px !important;
+}
+.metrouicss .dialog .header button.big {
+  min-height: 48px;
+  height: 48px;
+  font-size: 1.2em;
+}
+.metrouicss .dialog .header button img {
+  width: 16px;
+  height: 16px;
+  top: 8px;
+}
+.metrouicss .dialog .header button [class^="icon-"],
+.metrouicss .dialog .header button [class*=" icon-"] {
+  font-size: 11px;
+}
+.metrouicss .dialog .content {
+  min-height: 85px;
+  padding: 20px;
+  background-color: #FFFFFF;
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  font-weight: 300;
+  font-size: 11pt;
+  letter-spacing: 0.02em;
+  line-height: 14pt;
+  font-smooth: always;
+}
+.metrouicss .dialog .action {
+  position: relative;
+  bottom: 0;
+  width: auto;
+  height: 40px;
+  font-size: 18px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  background-color: #FFFFFF;
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.metrouicss button,
+.metrouicss .button {
+  font-weight: 400;
+  font-size: 9pt;
+  font-smooth: always;
+  line-height: 11pt;
+  font-size: 15px;
+  display: inline-block;
+  padding: 4px 12px;
+  line-height: 20px;
+  text-align: center;
+  vertical-align: middle !important;
+  min-width: 90px;
+  min-height: 32px;
+  height: 32px;
+  background-color: #ccc;
+  border: 1px transparent solid;
+  color: #353535;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-raduis: 0;
+  cursor: pointer;
+  width: auto;
+  *zoom: 1;
+}
+.metrouicss button:before,
+.metrouicss .button:before,
+.metrouicss button:after,
+.metrouicss .button:after {
+  display: table;
+  content: "";
+}
+.metrouicss button:after,
+.metrouicss .button:after {
+  clear: both;
+}
+.metrouicss button.standart,
+.metrouicss .button.standart {
+  min-width: 90px;
+  min-height: 32px;
+}
+.metrouicss button:active,
+.metrouicss .button:active,
+.metrouicss button.default:active,
+.metrouicss .button.default:active {
+  top: 1px;
+  left: 1px;
+}
+.metrouicss button:disabled,
+.metrouicss .button:disabled,
+.metrouicss button.disabled,
+.metrouicss .button.disabled {
+  background-color: #eaeaea;
+  color: #bebebe;
+  cursor: not-allowed;
+}
+.metrouicss button.default,
+.metrouicss .button.default {
+  background-color: #008287;
+  color: #fff;
+}
+.metrouicss button:focus,
+.metrouicss .button:focus {
+  outline: 0;
+  border: 1px #353535 dotted;
+}
+.metrouicss a.button:hover,
+.metrouicss a.button:active {
+  color: inherit;
+}
+.metrouicss .image-collection {
+  position: relative;
+  margin-left: 0;
+  list-style: none;
+  *zoom: 1;
+}
+.metrouicss .image-collection:before,
+.metrouicss .image-collection:after {
+  display: table;
+  content: "";
+}
+.metrouicss .image-collection:after {
+  clear: both;
+}
+.metrouicss .image-collection > div,
+.metrouicss .image-collection > li {
+  width: 220px;
+  height: 121px;
+  overflow: hidden;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  box-shadow: inset 0px 0px 1px #FFFFCC;
+  float: left;
+  background: #cccccc url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAP5SURBVGhD7ZdBSBRRGIB319VW8OBhAwMhgwIPQgpGHYoMDeoYeAkSDBKSEIw8BCUd7FahgZDQxZtBFw9BRkIGezA0FAo0EBIyCCrwILjq6vb9M/8uM7szu+7qaAvzweP9/3tv3vz//978703Ax8fHx2cvBLW2sbW11R4MBp+o6sjOzs7zioqKIVUPjZDWNjC+iqouV2FMNfWh4+hAKRFMJpNhtkxvKBS6iC6RF2oo9aboyrKWw2CNLfypvLx8KLi9vT2IE73aUWqMB4n+b/ZzVBtKCgKfCCYSiaTqJcmBO0DUVlnxacoK+/gn395x2uoo52iL6LBdc5AOvMHIZ+FwOIahCW1LQ18EW67Q9wC12WzNj+cOYNgKVQcZY8psyc/GxsYtVmYQZ1JZ0RWvHYiVlZVdw5A/qhtgYAPtjWwhSR6zODfPmDWz10THvEbMmc69dGAJA5pShskWweABym2XyE5hS3ckEllUPbC+vn6SLTfDeNdT35OTGGMTnC8SecP4zc3NZvQ52vtcjBdacHiOsX2qByorK5eoOkzNGU9WACNHMKZbZCJei/FfckUxE57p4aI4rGoAGz9QtZiaHU8cwPhjGPxL5Fwvd4OViuN0U2o7cdhKdnprdGbgxRaSNJkyvpOqIOMFno+w91+oGkCexCnbR57C1QEmGWIpLxDNE9bCRJfoG9FhWdAXU1Ei2apiwfDseYpxsDFngjJpdGTg9j8wjLF32YcSzWVrkXxOXzeTv9LhNmj/pqLM06hiwfCs3JIbVBVdzpMsHB0g8u9UdIUJHcfggPEi6jBV2oBi4DBLP49Nf1W04egAL5e/rpy4jcEx42ZLnWCM7QArFOvzOHNERRtuW+iR5G5Vs2Bp26jumZodSZsqyjzTKhYFH2/6eeu8VtwciOLxDIb+IJN8txZpo/89xfFA4rmzKso88yoWDNFf4fn0CiCfU9HGvp8DvHiNyB3lhXHkKPMvIBfzw3STeUZFiMfj9cgLRmsGjiuwFzC2ilWS/C+yRLBL5AIZTxkvkPnuqJiFJyexfHwYcAoHVkXnVB2g7aHRmZ950vRldT51oZNVlKyWxb6vgMDLohj9UlW5WvTjwFWKYy4X6JPD6iljz6SMpy1C9MfcjBe8vE5L5ujnMHysqhhUzfa6gZGnkSXLSSL4yrjP1BOMnZVxAv1hgjCG2G62OOOpAwLRGyUzdVFn/Ua6gfE1anzee5QnW8gKxnRizAKBMj7sXDA2wvlzXzIX6q4ugZ6vgBUMlL09wZb5yKrI9xCnVNNei95K3cZK5f0PtnKgDnhBCK8d79mlQoglS9/fS5DFEGmtByHGSuw6S/wnzJIcrqvs4+Pj41MMgcA/8Fr5zKgSl7AAAAAASUVORK5CYII%3D) 50% no-repeat;
+  display: table-cell;
+  vertical-align: middle !important;
+  text-align: center;
+}
+.metrouicss .image-collection > div > img,
+.metrouicss .image-collection > li > img {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  max-width: 100%;
+}
+.metrouicss .image-collection > div > .overlay,
+.metrouicss .image-collection > li > .overlay {
+  position: absolute;
+  width: 100%;
+  height: 55px;
+  overflow: hidden;
+  background-color: #1e1e1e;
+  color: #fff;
+  font-size: 8pt;
+  text-align: left;
+  line-height: 12px;
+  padding: 5px 10px;
+  opacity: .8;
+  bottom: -55px;
+}
+.metrouicss .image-collection > div:hover .overlay,
+.metrouicss .image-collection > li:hover .overlay {
+  -webkit-transform: translate(0, -55px);
+  -ms-transform: translate(0, -55px);
+  -o-transform: translate(0, -55px);
+  -moz-transform: translate(0, -55px);
+  transform: translate(0, -55px);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s easet;
+}
+.metrouicss .image-collection.p16x9 > div {
+  width: 220px;
+  height: 121px;
+}
+.metrouicss .image-collection.p4x3 > div {
+  width: 220px;
+  height: 165px;
+}
+
+#right_bar{
+	height:100%;
+	width:89px;
+	position:fixed;
+	right:-86px;
+	top:0;
+	z-index:0;
+}
+#right_bar_c{
+	height:100%;
+	width:86px;
+	position:absolute;
+	background-color:#111111;
+	top:0;
+	right:0;
+}
+#right_bar:hover{
+	-webkit-transition:0.2s ease all;
+    -moz-transition:0.2s ease all;
+	right:0px;
+}
+#right_bar button-group{
+	height:400px;
+}
+.bar_button {
+	height:100px;
+}
+#bt1, #bt2, #bt3, #bt4 {
+	position:relative;
+	left:100px;	
+}
+.bar_button img{
+	height:50px;
+	width:50px;
+	position:relative;
+	top:10px;
+	left:18px;
+	border:0px;
+}
+.bar_button p{
+	color:#a0a0a0;
+	text-align:center;
+	font-size:15px;
+	position:relative;
+}
+.bar_button:hover{
+	background-color:#333333;
+	cursor: pointer;  
+}
+.metrouicss .noselected {
+  border: 4px #FFFFFF solid;
+}
+.metrouicss .noselected:hover {
+  border: 4px #2d89ef solid;
+  cursor: pointer;  
+}
+#dialogBox .image-collection {
+	margin-left:20px;
+	float:left;
+}
+#dialogBox .content {
+	height:280px;
+	width:538px;
+}
+#school {
+	height:100%;
+	width:345px;
+	position:fixed;
+	right:-345px;
+	top:0;
+	background-color:#39F;
+}
+#back{
+	position:absolute;
+	top:40px;
+	left:40px;
+	height:40px;
+	width:40px;
+	background-image:url(images/back.png);
+}
+#school_title{
+	position:absolute;
+	top:35px;
+	left:90px;
+	font-size:35px;
+	color:#FFF;
+}
+#school_list {
+	position:absolute;
+	top:105px;
+	left:40px;
+}
+#school_list a div{
+  display: block;
+  float: left;
+  background-color: #79bcff;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  box-shadow: inset 0px 0px 1px #FFFFCC;
+  text-decoration: none;
+  color: #ffffff;
+  position: relative;
+  font-weight: 300;
+  font-size: 11pt;
+  letter-spacing: 0.02em;
+  line-height: 14pt;
+  font-smooth: always;
+  margin: 0 10px 10px 0;
+  overflow: hidden;
+}
+#school_list a div:hover {
+  outline: 3px #5b9ee3 solid;
+}
+.icon {
+	width:70px;
+	height:70px;
+	position:absolute;
+	top:25px;
+	left:25px;
+}
+.double .icon{
+	left:85px;	
+}
+.icon_name {
+	position:absolute;
+	left:15px;
+	bottom:5px;
+	font-size:12px;
+}
+#menu_bg {
+	position:fixed;
+	left:0;
+	top:0;
+	cursor:default;
+	display:none;
+	z-index:3;
+}
+#set_menu {
+	position:absolute;
+	height:130px;
+	width:260px;
+	background-color:#FFF;
+	border: 2px #000 solid;
+	right:44px;
+	top:83px;
+}
+.group_name {
+	color:#b4d3f2;
+	position:absolute;
+	top:-40px;
+	font-size:24px;
+}
+.set_list {
+	width:100%;
+	height:40px;
+	line-height:40px;
+	font-weight:bold;
+	font-size:15px;
+}
+.set_list span{
+	margin-left:20px;
+	color:#000;
+}
+.set_list:hover{
+	background-color:#dedede;
+}
+.self_c{
+	position:absolute;
+	top:10px;
+	left:10px;
+	width:100px;
+	height:100px;
+	display:table;
+}
+.self_name {
+	font-size:18px;
+	text-align:center;
+	display:table-cell;
+	vertical-align:middle;
+}
+#search_text {
+	position:absolute;
+	left:23px;
+	top:20px;
+	height:20px;
+	width:190px;
+	color:#000;
+	font-family:微软雅黑;
+	border: 1px #bababa solid;
+	font-size:15px;
+	line-height:20px;
+	padding:5px 6px 5px 6px;
+}
+#search_text:focus{
+	border-color:#000;
+	outline-style:none;
+}
+#baidu, #google {
+	position:absolute;
+	width:96px;
+	height:31px;
+	cursor:pointer;
+}
+#baidu {
+	top:65px;
+	left:25px;
+	background-image:url(images/baidu.png);
+}
+#google {
+	top:72px;
+	left:132px;
+	background-image:url(images/google.png);
+}

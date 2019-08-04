@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+body {
+	background-color:#4390df;
+	font-family:微软雅黑;
+}
+.input-control{
+	position:absolute;
+	height:30px;
+	width:250px;
+}
+.input-control .input_name{
+	position:absolute;
+	top:-30px;
+	left:0px;
+	color:#FFF;
+}
+.input-control input{
+	height:20px;
+	width:100%;
+	border: 1px #bababa solid;
+	font-size:15px;
+	line-height:20px;
+	padding:5px 30px 5px 6px;
+}
+.input-control input:focus{
+	border-color:#000;
+	outline-style:none;
+}
+.input-control button{
+	width:24px;
+	height:24px;
+	border:1px transparent solid;
+	background-image:url(images/clear.png);
+	background-color:transparent;
+	position:absolute;
+	right:-33px;
+	top:4px;
+	display:none;
+}
+.input-control button:hover {
+	background-color:#e5e5e5;
+	cursor:pointer;
+}
+.input-control button:active {
+	background-image:none;
+	background-color:#000;
+}
+#link_name {
+	top:150px;
+	left:150px;
+}
+#link_url {
+	top:150px;
+	left:500px;
+	width:300px;
+}
+#add_link, #clr_link, ul button {
+	position:absolute;
+	top:150px;
+	left:880px;
+	width:90px;
+	height:32px;
+	background-color:#0CF;
+	border:1px #FFF solid;
+	font-family:微软雅黑;
+	font-size:16px;
+	color:#FFF;
+	cursor:pointer;
+}
+#clr_link {
+	top:216px;
+}
+#add_link:active, #clr_link:active, ul button:active {	
+	background-color:#F60;	
+}
+ul {
+	position:absolute;
+	top:186px;
+	left:100px;
+	font-family:微软雅黑;
+	font-size:20px;
+	color:#FFF;
+	list-style-type:none;
+}
+ul button {
+	position:relative;
+	top:0px;
+	left:0px;
+	margin:10px 10px 10px 10px;
+}
+.l_url, .l_name{
+	position:relative;
+	overflow:hidden;	
+	border:1px #FFF solid;
+	height:30px;
+	padding:0 5px 0 5px;
+	margin:10px 10px 10px 10px;
+	float:left;
+}
+.l_url{
+	width:370px;
+	left:200px;
+}
+.l_name{
+	width:170px;
+	left:-400px
+}
+</style>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    
+<script type="text/javascript">
+var link_data="";
+$(document).ready(function(){	
+	checkCookie();
+	$(".input-control input").keydown(function(event){
+		if(event.which==9)
+			$(this).parent().find("button").hide();
+	});
+	bc=0;
+	$(".input-control button").mouseover(function(){
+		bc=1;
+	});
+	$(".input-control button").mouseout(function(){
+		bc=0;
+	});
+	$(".input-control button").click(function(){
+		$(this).parent().find("input").val("");
+		$(this).parent().find("input").focus();
+	});
+	$(".input-control input").focus(function(){
+		$(this).parent().find("button").show();
+	});
+	$(".input-control input").blur(function(){
+		if(!bc)
+				$(this).parent().find("button").hide();
+	});
+	$("li button").click(function(){
+		$(this).parent().remove();
+		link_data="";
+		$("li").map(function(){
+			link_data+='<url>'+$(this).find(".l_url").html()+'<name>'+$(this).find(".l_name").html()+'<end>';
+		});		
+		setCookie('link_url',link_data,365);
+	});
+});
+//取cookie
+function getCookie(metro_skin)
+{
+ if (document.cookie.length>0)
+  {
+  metro_start=document.cookie.indexOf(metro_skin + "=")
+  if (metro_start!=-1)
+    { 
+    metro_start=metro_start + metro_skin.length+1 
+    metro_end=document.cookie.indexOf(";",metro_start)
+    if (metro_end==-1) metro_end=document.cookie.length
+    return unescape(document.cookie.substring(metro_start,metro_end))
+    } 
+  }
+return ""
+}
+//设置cookie
+function setCookie(metro_skin,value,expiredays)
+{
+ var exdate=new Date()
+ exdate.setDate(exdate.getDate()+expiredays)
+ document.cookie=metro_skin+ "=" +escape(value)+
+ ((expiredays==null) ? "" : ";expires="+exdate.toGMTString())
+}
+//检查cookie
+function checkCookie()
+{
+ link_data=getCookie('link_url');
+ if (link_data!=null && link_data!="")
+  {
+	  link_data=link_data.replace(/<url>/g,'<li><div class="l_url">');
+	  link_data=link_data.replace(/<name>/g,'</div><div class="l_name">');
+	  link_data=link_data.replace(/<end>/g,'</div><button tabindex="-1" type="button">删除</button></li>');
+	  $("ul").html(link_data);
+  }
+}
+
+function add_link(){
+	name=$("#link_name input").val();
+	link_url=$("#link_url input").val();
+	if(name!=""&&link_url!=""){
+		name=name.replace(/</g,'&lt;');
+		name=name.replace(/>/g,'&gt;');
+		name=name.replace(/"/g,'&quot;');
+		link_url=link_url.replace(/</g,'&lt;');
+		link_url=link_url.replace(/>/g,'&gt;');		
+		link_url=link_url.replace(/"/g,'&quot;');
+		if(link_url.search('http://')==-1)
+			link_url='http://'+link_url;
+		$("#link_name input").val("");
+		$("#link_url input").val("");
+		link_data=getCookie('link_url');
+		link_data+='<url>'+link_url+'<name>'+name+'<end>';
+		setCookie('link_url',link_data,365);
+		checkCookie();
+	}
+	$("li button").bind("click",function(){
+ 		$(this).parent().remove();
+		link_data="";
+		$("li").map(function(){
+			link_data+='<url>'+$(this).find(".l_url").html()+'<name>'+$(this).find(".l_name").html()+'<end>';
+		});		
+		setCookie('link_url',link_data,365);
+	});
+}
+function del_all(){
+	setCookie('link_url','',365);
+	$("ul").html("");
+}
+
+</script>
+	<base target="_blank" />
+	<title>链接设置</title>
+</head>
+<body class="metrouicss" style="background-image:none;">
+<a href="index.html" tabindex="1" target="_self">
+	<div id="back" style="width:40px; height:40px; background-image:url(images/back.png); position:absolute; top:55px; left:100px;"></div>
+</a>
+<div style="position:absolute; top:48px; left:180px; font-size:40px; color:#FFF;">链接设置</div>
+<div id="link_url" class="input-control">
+	<div class="input_name">地址</div>
+    <input tabindex="0" class="text" type="text"/>
+    <button tabindex="-1" type="button"></button>
+</div>
+<div id="link_name" class="input-control" >
+	<div class="input_name">名称</div>
+    <input tabindex="1" class="text" type="text"/>
+    <button tabindex="-1" type="button"></button>
+</div>
+<button id="add_link" tabindex="-1" type="button" onclick="add_link()">添加</button>
+<button id="clr_link" tabindex="-1" type="button" onclick="del_all()">清空全部</button>
+<ul>
+</ul>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>抖动Demo</title>
+<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="jquery.mousewheel.js"></script>
+<script>
+h=$(window).height();
+w=$(window).width();
+var pic_h=438;
+var pic_w=312;
+$(document).ready(function(){
+	$('.bg').width(w);
+	$('.season').css('-webkit-transform','translateX('+(w-pic_w)/2+'px)');
+	$('.su1 .summer').css('top',h-pic_h+'px');
+	$('.su1').css('-webkit-transform','translateX(-'+w+'px)');
+	$('.su2').css('-webkit-transform','translateX('+w+'px)');
+	$('.su1').css('display','inline');
+	$('.su2').css('display','inline');
+	$('.su1 .summer').css('-webkit-transform','translateX('+(w*3-pic_w)/2+'px)');
+	$('.su2 .summer').css('-webkit-transform','translateX('+(-w-pic_w)/2+'px)');
+	$('#plane').css('display','inline');
+	sui=0;
+	$(document).mousewheel(function(event, delta){
+		if((sui<3&&delta>0) || (sui>0&&delta<0))
+			sui+=delta;
+		bw=sui*w/3;
+		//$('.su2 .summer').css('left',bw-w/2-209+'px');
+		$('.su1').css('-webkit-transform','translateX(-'+(w-bw)+'px)');
+		$('.su2').css('-webkit-transform','translateX('+(w-bw)+'px)');
+		$('.su1 .summer').css('-webkit-transform','translateX('+(w*1.5-pic_w/2-bw)+'px)');
+		$('.su2 .summer').css('-webkit-transform','translateX('+(bw-(w+pic_w)/2)+'px)');
+		$('.cloud1').css('left',(Math.sqrt(sui)*w/4-148)+'px');
+		rx=68+sui*5;
+		ry=170+sui;
+		ty=-sui*w*1300/1366;
+		tz=-300-Math.sqrt(sui/2)*h/2;
+		$('#plane').css('-webkit-transform','scale(0.3, 0.3) rotateX('+rx+'deg) rotateY('+ry+'deg) \
+						rotateZ(-92deg) translateY('+ty+'px) translateZ('+tz+'px)');
+	});
+});
+</script>
+<style type="text/css">
+body{
+	overflow:hidden;
+	background-color:#00CC4A;
+}
+.bg{
+	position:absolute;
+	height:50%;
+	width:0px;
+	overflow:hidden;
+	-webkit-transition:2.5s linear;
+    -webkit-transition-property:all;
+	left:0;
+	display:none;
+}
+.bg0CF {
+	background:#0CF;
+}
+#plane {
+	-webkit-transition:0.8s ease-out;
+    -webkit-transition-property:all;
+	-webkit-transform-style:preserve-3d;
+	-webkit-transform: scale(0.3, 0.3) rotateX(68deg) rotateY(170deg) rotateZ(-92deg) translateZ(-300px); 
+	top:100%;
+	position:absolute;
+	display:none;
+}
+#plane span{
+	position:absolute;
+	width:200px;
+	height:600px;
+}
+#plane .body_right {
+	background:url(images/body_r.svg);
+	-webkit-transform-origin:100px 0;
+	-webkit-transform:rotate3d(1,10,0,71.666deg);
+}
+#plane .wing_right {
+	width:500px;
+	height:600px;
+	background:url(images/wing_r.svg);
+}
+#plane .body_left {
+	background:url(images/body_l.svg);
+	-webkit-transform-origin:50px 0;
+	-webkit-transform:translateX(50px) rotate3d(-1,10,0,-71.666deg);
+}
+#plane .wing_left {
+	width:500px;
+	height:600px;
+	background:url(images/wing_l.svg);	
+	-webkit-transform:translateX(-300px);
+}
+.su1{
+	top:0;
+}
+.su2{
+	bottom:0;
+}
+.season {
+	-webkit-transition:2.5s linear;
+    -webkit-transition-property:all;
+	height:438px;
+	width:312px;
+	position:absolute;
+	left:0;
+	bottom:0;
+}
+.spring {
+	background-image: url(images/spring.png);
+    -webkit-transition-property:none;
+}
+.summer {
+	background-image: url(images/summer.png);
+}
+h1 {
+	text-align:center;
+	font-size: 40px;
+	color: #FFF;
+}
+#cloud div{
+	background:url(images/cloud.png);
+	width:148px;
+	height:100px;
+	position:absolute;
+	top:60px;
+	left:-148px;
+	-webkit-transition:0.5s ease-in-out;
+}
+#sp_h {
+	font-family:幼圆;
+}
+</style>
+</head>
+
+<body>
+
+
+
+<h1 id="sp_h">春</h1>
+<div class="season spring"></div>
+
+<div class="su1 bg bg0CF"></div>
+<div class="su2 bg bg0CF"></div>
+<div id="plane">
+	<span class="wing_right"></span>
+	<span class="body_right"></span> 
+	<span class="body_left"></span>
+	<span class="wing_left"></span>   
+</div>
+
+<div class="su1 bg">
+	<h1>夏</h1>
+	<div class="season summer"></div>
+</div>
+<div class="su2 bg">
+	<div class="season summer"></div>
+</div>
+
+
+<div id="cloud">
+	<div class="cloud1"></div>
+</div>
+
+</body>
+</html>

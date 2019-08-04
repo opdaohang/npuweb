@@ -1,0 +1,476 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script src="./jquery-1.9.1.min.js"></script>
+    <link href="./npuweb.css" rel="stylesheet">
+     <script src="./jquery.mousewheel.js"></script>
+     <script src="./dialog.js"></script>
+     <script src="./win8.js"></script>
+     
+<script type="text/javascript">
+if (getCookie('web_version')=="old")
+	window.location="beta1.4/index.html";
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?5cea39a9d6034ee1bc4ff99c6f0fbe92";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+	<base target="_blank" />
+	<title>西工大导航网|西北工业大学导航网</title>
+    <meta name="keywords" content="西工大导航网,西工大,西工大导航,西北工业大学导航" />  
+<meta name="description" content="西工大导航网,西工大人自己的导航网站。西工大导航网收录了西北工业大学校内外的相关站点，是值得每一个西工大人收藏的好网站。" /> 
+</head>
+
+<body id="metro" class="metrouicss">
+<div class="page secondary fixed-header" onmouseout="hide_bar()">
+    <div class="page-header ">
+        <div class="page-header-content">
+            <div class="user-login" onclick="show_set()"> 
+                 <div class="name">
+                      <span class="first-name">西工大导航网2.0</span>
+                 </div>
+                 <div class="avatar">
+                      <img src="./images/logo.png"/>
+                 </div>
+            </div>
+            <h1 class="fw-normal">常用</h1>
+        </div>
+    </div>
+    <div class="page-region">
+        <div class="page-region-content tiles">
+            <div class="tile-group">
+            	<div class="group_name">校内常用</div>       
+                <div class="tile double" style="background-color:#fff48f; cursor:default;">
+                	<input id="search_text" type="text"/>
+                    <div id="baidu"></div>
+                    <div id="google"></div>
+                </div>
+                <a href="http://www.nwpu.edu.cn" rel="nofollow">
+               		<div class="tile" style="background-color:#36F;">
+                    	<div class="icon" style="background-image:url(./images/xncy.png); background-position:140px 490px;"></div>
+                    	<div class="icon_name">西工大主页</div>
+                    </div>
+                </a>
+                <a href="http://bbs.nwpu.edu.cn" >
+                    <div class="tile" style="background-color:#39F;">
+                        <div class="icon" style="background-image:url(./images/xncy.png); background-position:70px 490px;"></div>
+                    	<div class="icon_name">三航四方BBS</div>            
+                    </div>
+                </a>   
+                <a href="http://www.openlab.net.cn" rel="nofollow">
+                    <div class="tile" style="background-color:#0BB;">
+                        <div class="icon" style="background-image:url(./images/xncy.png); background-position:140px 420px;"></div>
+                    	<div class="icon_name">开放实验室</div>            
+                    </div>
+                </a>             
+                 <a href="https://uis.nwpu.edu.cn/cas/login" rel="nofollow">
+                        <div class="tile">
+                        <div class="icon" style="background-image:url(./images/xncy.png); background-position:70px 420px;"></div>
+                    	<div class="icon_name">翱翔门户</div>            
+                    </div>
+                </a>
+                <a href="http://zizhu.nwpu.edu.cn:8900/" rel="nofollow">
+                        <div class="tile">
+                        <div class="icon" style="background-image:url(./images/shenlan.png); background-position:140px 350px;"></div>
+                    	<div class="icon_name">深澜查流量</div>            
+                    </div>
+                </a>                
+                <a href="http://mail.nwpu.edu.cn/" rel="nofollow">
+                        <div class="tile">
+                        <div class="icon" style="background-image:url(./images/xncy.png); background-position:140px 280px;"></div>
+                    	<div class="icon_name">校内邮箱</div>            
+                    </div>
+                </a>
+                <a href="https://npupt.com/" rel="nofollow">
+                        <div class="tile" style="background-color:#6C3;">
+                        <div class="icon" style="background-image:url(./images/xncy.png); background-position:70px 280px;"></div>
+                    	<div class="icon_name">蒲公英PT</div>            
+                    </div>
+                </a>
+                <a href="http://xygg.nwpu.edu.cn/info/1003/20884.htm" rel="nofollow">
+                        <div class="tile">
+                        <div class="icon" style="background-image:url(./images/xncy.png); background-position:70px 210px;"></div>
+                    	<div class="icon_name">校历</div>            
+                    </div>
+                </a>                                        
+                <a href="http://tushuguan.nwpu.edu.cn/" rel="nofollow">
+                        <div class="tile" style="background-color:#3CF;">
+                        <div class="icon" style="background-image:url(./images/xncy.png); background-position:140px 140px;"></div>
+                    	<div class="icon_name">图书馆</div>            
+                    </div>
+                </a>
+                <a href="http://news.nwpu.edu.cn/" >
+                        <div class="tile" style="background-color:#dc5051;">
+                        <div class="icon" style="background-image:url(./images/xncy.png); background-position:70px 140px;"></div>
+                    	<div class="icon_name">西工大新闻网</div>            
+                    </div>
+                </a>       
+            </div>
+             <div class="tile-group">
+             	<div class="group_name">生活</div>
+                <a href="http://xian.tianqi.com/" rel="nofollow">
+                	<div class="tile double" style="background-color:#09F">
+                		<iframe style="position:absolute; top:10px;" width="250" scrolling="no" height="80" frameborder="0" allowtransparency="true" src="http://i.tianqi.com/index.php?c=code&id=8&color=%23FFFFFF&icon=1&num=2"></iframe>                        
+                    	<div class="icon_name">天气</div>
+                	</div>
+                </a>                
+                <a href="http://www.12306.cn/" rel="nofollow">
+                        <div class="tile" style="background-color:#36F;">
+                        <div class="icon" style="background-image:url(./images/sh.png);background-position:140px 420px;"></div>
+                    	<div class="icon_name">铁路订票</div>            
+                    </div>
+                </a>         
+                <a href="http://songshuhui.net/" rel="nofollow">
+                        <div class="tile" style="background-color:#ff7100;">
+                        <div class="icon" style="background-image:url(./images/sh.png);background-position:140px 350px;"></div>
+                    	<div class="icon_name">松鼠科学会</div>            
+                    </div>
+                </a>
+                <a href="http://www.guokr.com/" rel="nofollow">
+                        <div class="tile" style="background-color:#85c155;">
+                        <div class="icon" style="background-image:url(./images/sh.png);background-position:210px 280px;"></div>
+                    	<div class="icon_name">果壳</div>            
+                    </div>
+                </a>           
+                <a href="https://www.taobao.com/?spm=608.2291429.102201.9.7610ee72oWs5YQ" rel="nofollow">
+                        <div class="tile" style="background-color:#ff4400;">
+                        <div class="icon" style="background-image:url(./images/sh.png);background-position:140px 280px;"></div>
+                    	<div class="icon_name">淘宝网</div>            
+                    </div>
+                </a>                
+                <a href="https://www.tmall.com/?spm=608.2291429.102201.10.7610ee72oWs5YQ" rel="nofollow">
+                        <div class="tile" style="background-color:#b20000;">
+                        <div class="icon" style="background-image:url(./images/sh.png);background-position:210px 210px;"></div>
+                    	<div class="icon_name">天猫</div>            
+                    </div>
+                </a>
+				<a href="https://s.click.taobao.com/t?e=m%3D2%26s%3Dryy9LPlLk%2F0cQipKwQzePCperVdZeJviEViQ0P1Vf2kguMN8XjClAjaki9LgtnEi6FF7QIkSb9wotr%2Bcu%2BU1Y1bX6%2FSyrflrvZGvecQM9%2F4OlfDVEtaD0uo0BcZWWIRYYA%2FDpPH01wK9AmARIwX9K%2BAjBDXvuqoU47FHjfsActnIQu5PdXpojKJn5AyUbPoV" rel="nofollow">
+                        <div class="tile" style="background-color: rgb(227, 26, 60); top: 390px; left: 0px;">
+                        <div class="icon" style="background-image:url(./images/ju.png);background-position:140px 280px;"></div>
+                    	<div class="icon_name">聚划算</div>            
+                    </div>
+                </a>  
+                <a href="https://s.click.taobao.com/t?e=m%3D2%26s%3DjSkV1EO%2B9%2BccQipKwQzePCperVdZeJviEViQ0P1Vf2kguMN8XjClAjaki9LgtnEiF0qZilp6Jwsotr%2Bcu%2BU1Y1bX6%2FSyrflrvZGvecQM9%2F4OlfDVEtaD0n7uq6sLYIqu0Q7QOybCaQy9AmARIwX9K9E0MBlxnM%2FDnaYpFBIfC%2F2orLd93QuCUMYOae24fhW0" rel="nofollow">
+                        <div class="tile" style="background-color: rgb(250, 201, 2); top: 390px; left: 0px;">
+                        <div class="icon" style="background-image:url(./images/pig.png);background-position:140px 280px;"></div>
+                    	<div class="icon_name">飞猪</div>            
+                    </div>
+                </a>				
+                <a href="http://www.amazon.cn/" rel="nofollow">
+                        <div class="tile" style="background-color:#2f3842;">
+                        <div class="icon" style="background-image:url(./images/sh.png);background-position:210px 140px;"></div>
+                    	<div class="icon_name">亚马逊</div>            
+                    </div>
+                </a>
+                <a href="http://www.jd.com/" rel="nofollow">
+                        <div class="tile" style="background-color:#e4393c;">
+                        <div class="icon" style="background-image:url(./images/sh.png);background-position:140px 140px;"></div>
+                    	<div class="icon_name">京东商城</div>            
+                    </div>
+                </a>
+                <a href="http://www.suning.com/" rel="nofollow">
+                        <div class="tile" style="background-color:#0081cc;">
+                        <div class="icon" style="background-image:url(./images/sh.png);background-position:210px 70px;"></div>
+                    	<div class="icon_name">苏宁易购</div>            
+                    </div>
+                </a>  
+                <a href="https://s.click.taobao.com/t?e=m%3D2%26s%3D1Od13EaSV8AcQipKwQzePDAVflQIoZepK7Vc7tFgwiFRAdhuF14FMeqhlCSw0mip1aH1Hk3GeOhFgStyzS1y9JBbLSQcaGXRCWNu38%2Fded1y49NHjYm3HnQRaEJbaM%2BtIYULNg46oBA%3D" rel="nofollow">
+                        <div class="tile" style="background-color:rgb(227, 26, 60);">
+                        <div class="icon" style="background-image:url(./images/handu.png);background-position:210px 70px;"></div>
+                    	<div class="icon_name">韩都衣舍</div>            
+                    </div>
+                </a>  				
+                <a href="http://email.163.com/" rel="nofollow">
+                        <div class="tile" style="background-color:#e7222b;">
+                        <div class="icon" style="background-image:url(./images/sh.png);background-position:70px 420px;"></div>
+                    	<div class="icon_name">网易邮箱</div>            
+                    </div>
+                </a>
+                <a href="http://mail.qq.com/" rel="nofollow">
+                        <div class="tile" style="background-color:#23a1dd;">
+                        <div class="icon" style="background-image:url(./images/sh.png);background-position:70px 350px;"></div>
+                    	<div class="icon_name">QQ邮箱</div>            
+                    </div>
+                </a>
+				 <a href="http://www.xianjj.com/" rel="nofollow">
+                        <div class="tile" style="top: 390px; left: 260px;">
+                        <div class="icon" style="background-image:url(./images/sh.png);background-position:70px 210px;"></div>
+                    	<div class="icon_name">西安违章查询</div>            
+                    </div>
+                </a>
+             </div>
+               <div class="tile-group">
+             	<div class="group_name">资讯</div>     
+                <a href="http://www.qq.com/" rel="nofollow">
+                        <div class="tile" style="background-color:#0169ad;">
+                        <div class="icon" style="background-image:url(./images/zx.png);background-position:140px 280px;"></div>
+                    	<div class="icon_name">腾讯网</div>            
+                    </div>
+                </a>
+                <a href="http://www.sina.com/" rel="nofollow">
+                        <div class="tile" style="background-color:#ff8500;">
+                        <div class="icon" style="background-image:url(./images/zx.png);background-position:70px 280px;"></div>
+                    	<div class="icon_name">新浪网</div>            
+                    </div>
+                </a>
+                <a href="http://www.ifeng.com/" rel="nofollow">
+                        <div class="tile" style="background-color:#901c23;">
+                        <div class="icon" style="background-image:url(./images/zx.png);background-position:140px 210px;"></div>
+                    	<div class="icon_name">凤凰网</div>            
+                    </div>
+                </a>
+                <a href="http://www.people.com.cn/" rel="nofollow">
+                        <div class="tile" style="background-color:#ff0000;">
+                        <div class="icon" style="background-image:url(./images/zx.png);background-position:70px 210px;"></div>
+                    	<div class="icon_name">人民网</div>            
+                    </div>
+                </a
+                ><a href="http://www.xinhuanet.com/" rel="nofollow">
+                        <div class="tile" style="background-color:#00b4ef;">
+                        <div class="icon" style="background-image:url(./images/zx.png);background-position:140px 140px;"></div>
+                    	<div class="icon_name">新华网</div>            
+                    </div>
+                </a>
+                <a href="http://www.163.com/" rel="nofollow">
+                        <div class="tile" style="background-color:#e7222b;">
+                        <div class="icon" style="background-image:url(./images/zx.png);background-position:70px 140px;"></div>
+                    	<div class="icon_name">网易</div>            
+                    </div>
+                </a>
+                <a href="http://www.sohu.com/" rel="nofollow">
+                        <div class="tile" style="background-color:#f5c500;">
+                        <div class="icon" style="background-image:url(./images/zx.png);background-position:140px 70px;"></div>
+                    	<div class="icon_name" style="color:#000;">搜狐网</div>            
+                    </div>
+                </a> 
+            </div>
+             <div class="tile-group">
+             	<div class="group_name">资源&middot;学习</div>                   
+                <a href="http://pt.zhixing.bjtu.edu.cn" rel="nofollow">
+                        <div class="tile" style="background-color:#6CC;">
+                        <div class="icon" style="background-image:url(./images/zy.png);background-position:140px 280px;"></div>
+                    	<div class="icon_name">知行PT</div>            
+                    </div>
+                </a>
+                <a href="http://bt.neu6.edu.cn/" rel="nofollow">
+                        <div class="tile">
+                        <div class="icon" style="background-image:url(./images/zy.png);background-position:70px 280px;"></div>
+                    	<div class="icon_name">六维空间</div>            
+                    </div>
+                </a>    
+                <a href="http://jpkc.nwpu.edu.cn/" rel="nofollow">
+                        <div class="tile" style="background-color:#4AC;">
+                        <div class="icon" style="background-image:url(./images/zy.png);background-position:140px 210px;"></div>
+                    	<div class="icon_name">精品课程</div>            
+                    </div>
+                </a>  
+                <a href="http://g.wanfangdata.com.cn/" rel="nofollow">
+                        <div class="tile" style="background-color:#09F;">
+                        <div class="icon" style="background-image:url(./images/zy.png);background-position:70px 210px;"></div>
+                    	<div class="icon_name">万方数据</div>            
+                    </div>
+                </a>                   
+                <a href="http://www.nlc.gov.cn/" rel="nofollow">
+                        <div class="tile" style="background-color:#017185;">
+                        <div class="icon" style="background-image:url(./images/zy.png);background-position:140px 140px;"></div>
+                    	<div class="icon_name">国家图书馆</div>            
+                    </div>
+                </a>                        
+                <a href="http://www.pigai.org/" rel="nofollow">
+                        <div class="tile" style="background-color:#1072ba;">
+                        <div class="icon" style="background-image:url(./images/zy.png);background-position:140px 70px;"></div>
+                    	<div class="icon_name">英语作文批改</div>            
+                    </div>
+                </a>
+            </div>
+            <div class="tile-group">
+             	<div class="group_name">娱乐</div>  				
+                <a href="http://www.bilibili.tv/" rel="nofollow">
+                        <div class="tile" style="background-color:#fd73a4;">
+                        <div class="icon" style="background-image:url(./images/yl.png);background-position:210px 280px;;"></div>
+                    	<div class="icon_name">哔哩哔哩</div>            
+                    </div>
+                </a>                
+                <a href="http://www.mop.com/" rel="nofollow">
+                        <div class="tile">
+                        <div class="icon" style="background-image:url(./images/yl.png);background-position:280px 210px;"></div>
+                    	<div class="icon_name">猫扑</div>            
+                    </div>
+                </a>
+                <a href="http://www.qiushibaike.com/" rel="nofollow">
+                        <div class="tile">
+                        <div class="icon" style="background-image:url(./images/yl.png);background-position:210px 210px;"></div>
+                    	<div class="icon_name">糗事百科</div>            
+                    </div>
+                </a>
+                <a href="http://nba.hupu.com/" rel="nofollow">
+                        <div class="tile" style="background-color:#942021;">
+                        <div class="icon" style="background-image:url(./images/yl.png);background-position:280px 140px;"></div>
+                    	<div class="icon_name">虎扑</div>            
+                    </div>
+                </a>
+                <a href="http://www.youku.com/" rel="nofollow">
+                        <div class="tile" style="background-color:#FFF;">
+                        <div class="icon" style="background-image:url(./images/yl.png);background-position:280px 70px;"></div>
+                    	<div class="icon_name" style="color:#000;">优酷</div>            
+                    </div>
+                </a>
+                <a href="http://douban.fm/" rel="nofollow">
+                        <div class="tile">
+                        <div class="icon" style="background-image:url(./images/yl.png);background-position:140px 280px;"></div>
+                    	<div class="icon_name">豆瓣FM</div>            
+                    </div>
+                </a>
+                <a href="http://www.yinyuetai.com/" rel="nofollow">
+                        <div class="tile" style="background-color:#86aa28;">
+                        <div class="icon" style="background-image:url(./images/yl.png);background-position:70px 280px;"></div>
+                    	<div class="icon_name">音悦Tai</div>            
+                    </div>
+                </a>       
+                <a href="http://www.douban.com/" rel="nofollow">
+                        <div class="tile" style="background-color:#0C6;">
+                        <div class="icon" style="background-image:url(./images/yl.png);background-position:140px 210px;"></div>
+                    	<div class="icon_name">豆瓣</div>            
+                    </div>
+                </a>      
+                <a href="http://weibo.com/" rel="nofollow">
+                        <div class="tile" style="background-color:#09F;">
+                        <div class="icon" style="background-image:url(./images/yl.png);background-position:140px 140px;"></div>
+                    	<div class="icon_name">新浪微博</div>            
+                    </div>
+                </a>
+                <a href="http://www.hongxiu.com/" rel="nofollow">
+                        <div class="tile" style="background-color:#de0000;">
+                        <div class="icon" style="background-image:url(./images/yl.png);background-position:70px 70px;"></div>
+                    	<div class="icon_name">红袖添香</div>            
+                    </div>
+                </a>         
+            </div>
+             <div class="tile-group">
+             	<div class="group_name">求职</div>
+                <a href="http://job.nwpu.edu.cn/home.do" rel="nofollow">
+                        <div class="tile" style="background-color:#47E;">
+                        <div class="icon" style="background-image:url(./images/qt.png);background-position:140px 280px;"></div>
+                    	<div class="icon_name">就业信息网</div>            
+                    </div>
+                </a> 
+                 <a href="http://www.chinahr.com/" rel="nofollow">
+                        <div class="tile" style="background-color:#744f97;">
+                        <div class="icon" style="background-image:url(./images/qt.png);background-position:70px 280px;"></div>
+                    	<div class="icon_name">中华英才网</div>            
+                    </div>
+                </a>
+                <a href="http://www.zhaopin.com/" rel="nofollow">
+                        <div class="tile" style="background-color:#2996c6;">
+                        <div class="icon" style="background-image:url(./images/qt.png);background-position:140px 210px;"></div>
+                    	<div class="icon_name">智联招聘</div>            
+                    </div>
+                </a>
+                <a href="http://www.51job.com/" rel="nofollow">
+                        <div class="tile" style="background-color:#06F;">
+                        <div class="icon" style="background-image:url(./images/qt.png);background-position:70px 210px;"></div>
+                    	<div class="icon_name">前程无忧</div>            
+                    </div>
+                </a>
+            </div>
+             <div class="tile-group">
+             	<div class="group_name">实验室</div>
+                <a href="lab/cube.html">
+                    <div class="tile" style="background-color:#ff9422;">
+                        <div class="icon" style="background-image:url(./images/qt.png);background-position:140px 140px;"></div>
+                    	<div class="icon_name">魔方</div>            
+                    </div>
+                </a>   			
+             </div>
+             <div id="self_link" class="tile-group">
+             	<div class="group_name">自定义</div>
+                <a href="link_set.html" target="_self">
+           		    <div class="tile" style="background-color:#F60;">
+                		<div class="icon" style="background-image:url(./images/qt.png);background-position:140px 70px;"></div>
+                   		<div class="icon_name">链接设置</div>
+              		</div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="right_bar" onmouseover="show_bar()">
+  <div id="right_bar_c">
+	<div id="button-group">
+		<a onclick="goto_link()">
+        	<div class="bar_button">
+            	<div id="bt1">
+                	<img src="./images/self_link.png" />
+                	<p>自定义链接</p>
+                </div>
+     	    </div>
+        </a>
+		<a onclick="backhome()">
+        	<div class="bar_button">
+        		<div id="bt2">
+                	<img src="./images/home.png" />
+                	<p>主页</p>
+                </div>
+     	    </div>
+        </a>
+		<a onclick="school()">
+        	<div class="bar_button">
+        		<div id="bt3">
+                	<img src="./images/school.png" />
+                	<p>学院网站</p>
+                </div>
+     	    </div>
+        </a>
+		<a id="change_skin">
+        	<div class="bar_button">
+        		<div id="bt4">
+                	<img src="./images/skin.png" />
+                	<p>换肤</p>
+                </div>
+     	    </div>
+        </a>
+    </div>
+  </div>
+</div>
+<div id="school">
+	<div id="back" onclick="hide_school()"></div>
+    <div id="school_title">学院网站</div>
+    <div id="school_list">
+     <a href="http://hangkong.nwpu.edu.cn/" rel="nofollow" title="航空学院"><div style="background-image:url(./images/schools.png);background-position:240px 240px;"></div></a>
+	 <a href="http://hangtian.nwpu.edu.cn/" rel="nofollow" title="航天学院"><div style="background-image:url(./images/schools.png);background-position:180px 240px;"></div></a>
+	 <a href="http://hanghai.nwpu.edu.cn/" rel="nofollow" title="航海学院"><div style="background-image:url(./images/schools.png);background-position:120px 240px;"></div></a>
+	 <a href="http://cailiao.nwpu.edu.cn/" rel="nofollow" title="材料学院"><div style="background-image:url(./images/schools.png);background-position:60px 240px;"></div></a>
+     <a href="http://jidian.nwpu.edu.cn/" rel="nofollow" title="机电学院"><div style="background-image:url(./images/schools.png);background-position:240px 180px;"></div></a>
+	 <a href="http://tujian.nwpu.edu.cn/" rel="nofollow" title="力学与土木建筑学院"><div style="background-image:url(./images/schools.png);background-position:180px 180px;"></div></a>
+	 <a href="http://dongneng.nwpu.edu.cn/" rel="nofollow" title="动力与能源学院"><div style="background-image:url(./images/schools.png);background-position:120px 180px;"></div></a>
+	 <a href="http://dianzi.nwpu.edu.cn/" rel="nofollow" title="电子信息学院"><div style="background-image:url(./images/schools.png);background-position:60px 180px;"></div></a>
+     <a href="http://zdhxy.nwpu.edu.cn/" rel="nofollow" title="自动化学院"><div style="background-image:url(./images/schools.png);background-position:240px 120px;"></div></a>
+	 <a href="http://jsj.nwpu.edu.cn/" rel="nofollow" title="计算机学院"><div style="background-image:url(./images/schools.png);background-position:180px 120px;"></div></a>
+	 <a href="http://lxy.nwpu.edu.cn/" rel="nofollow" title="理学院"><div style="background-image:url(./images/schools.png);background-position:120px 120px;"></div></a>
+	 <a href="http://som.nwpu.edu.cn/" rel="nofollow" title="管理学院"><div style="background-image:url(./images/schools.png);background-position:60px 120px;"></div></a>
+     <a href="http://rwjj.nwpu.edu.cn/" rel="nofollow" title="人文与经法学院"><div style="background-image:url(./images/schools.png);background-position:240px 60px;"></div></a>
+	 <a href="http://rjwdz.nwpu.edu.cn/" rel="nofollow" title="软件与微电子学院"><div style="background-image:url(./images/schools.png);background-position:180px 60px;"></div></a>
+	 <a href="http://shengming.nwpu.edu.cn/" rel="nofollow" title="生命学院"><div style="background-image:url(./images/schools.png);background-position:120px 60px;"></div></a>
+	 <a href="http://jiaoyu.nwpu.edu.cn/" rel="nofollow" title="教育实验学院"><div style="background-image:url(./images/schools.png);background-position:60px 60px;"></div></a>
+    </div>
+</div>
+<div id="menu_bg" onclick="hide_set()">
+               <div id="set_menu">
+               		<div style="height:5px; width:100%;"></div>
+               		<a href="beta1.4/index.html" target="_self" onclick="old_version()">
+                    	<div class="set_list"><span>返回旧版</span></div>
+                    </a>
+             	    <a href="http://blog.renren.com/blog/601471272/903084309" rel="nofollow">
+                    	<div class="set_list"><span>操作指南</span></div>       
+                    </a>             
+           	        <a href="about.html" target="_self">
+                    	<div class="set_list"><span>关于本站</span></div>     
+                    </a>               
+               </div>
+</div>
+</body>
+</html>

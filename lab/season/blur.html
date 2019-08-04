@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>模糊Demo</title>
+
+<style type="text/css">
+.bg{
+	float:left;
+	height:500px;
+	width:500px;
+	margin-left:2%;
+	margin-top:100px;
+	background-color:#00CC4A;
+	font-size:24px;
+	color:#FFF;
+	font-family:微软雅黑;
+}
+.bg0CF {
+	background:#0CF;
+}
+.season {
+	height:438px;
+	width:312px;
+}
+.spring {
+	background-image: url(images/spring.png);
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg" >
+	<div class="season spring">正常</div>
+</div>
+
+<div class="bg" style="-webkit-transform:rotateZ(45deg);">平面旋转45度
+	<div class="season spring" style="-webkit-transform:rotateZ(-45deg);"></div>
+</div>
+
+<div class="bg" style="-webkit-transform:skewX(-45deg);">平面倾斜45度
+	<div class="season spring" style="-webkit-transform:skewX(45deg);"></div>
+</div>
+
+<div class="bg"  style="-webkit-transform-style:preserve-3d;-webkit-transform:rotateZ(45deg)">preserve-3d旋转45度
+	<div class="season spring" style="-webkit-transform:rotateZ(-45deg) translateZ(100px); "></div>
+</div>
+
+
+<div class="bg" style="-webkit-transform:rotateZ(45deg);">平面旋转45度
+	<div class="season spring" style="-webkit-transform:rotateZ(-45deg);"></div>
+</div>
+
+<div class="bg" style="-webkit-transform:skewX(-45deg);">平面倾斜45度
+	<div class="season spring" style="-webkit-transform:skewX(45deg);"></div>
+</div>
+
+<div class="bg" style="-webkit-transform:rotateZ(45deg);">父类平面旋转45度
+	<div class="season spring"></div>
+</div>
+	
+</body>
+</html>

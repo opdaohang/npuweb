@@ -1,0 +1,73 @@
+body {
+	background-color: #60cafe;
+	width:1024px;
+	height:1050px;
+	margin:auto;
+}
+a {
+	text-decoration:none;
+	color:#03F;
+}
+a:hover {
+	text-decoration:underline;
+}
+img {	
+	border:0px;
+}
+#content #logo {
+	background-image: url(images/logo.png);
+	height: 192px;
+	width: 575px;
+	float: left;
+	position:relative;
+	top: 10px;
+	left: 10px;
+}
+#content {
+	height:558px;
+	margin-left:0px;
+	position:absolute;
+}
+#content #cloud1 {
+	background-image: url(images/cloud1.png);
+	width:755px;
+	height:430px;
+	position:absolute;
+	left:200px;
+	z-index:1;
+}
+#content #cloud2 {
+	background-image: url(images/cloud2.png);
+	width:600px;
+	height:339px;
+	position:absolute;
+	left:-30px;
+	top:230px;	
+	z-index:0;
+}
+#content #cloud3 {
+	background-image: url(images/cloud3.png);
+	width:787px;
+	height:479px;
+	position:absolute;
+	left:280px;
+	top:320px;	
+	z-index:1;
+}
+#content #footer {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 13px;
+	text-align:center;
+	position:absolute;
+	left:0px;
+	top:1030px;
+	width:1024px;
+}
+#content #bg {
+	background-image: url(images/bg.jpg);
+	height: 492px;	
+	width:1024px;
+	position:absolute;
+	top:558px;
+	left:0px;
+}
