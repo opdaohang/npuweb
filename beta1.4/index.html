@@ -1,373 +1,746 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-<title>�����󵼺���|������ҵ��ѧ������</title> 
-<meta name="keywords" content="�����󵼺���,������,�����󵼺�,������ҵ��ѧ����" />  
-<meta name="description" content="�����󵼺���,���������Լ��ĵ�����վ�������󵼺�����¼��������ҵ��ѧУ��������վ�㣬����У԰�����Դ��ѯ�ȷ��࣬��ֵ��ÿһ�����������ղصĺ���վ��" /> 
-<link href="npu.css" rel="stylesheet" type="text/css" />
-<script language="JavaScript" src="npu.js"></script>
-<base target="_blank" />
-</head>
-<body onLoad="checkCookie();schoolCookie();">
-<div id="back_ground">
-  <div id="bg_top"></div>
-  <div id="bg_head">
-    <div id="bgleft" style="background-image:url(images/body_01.png);"></div>
-    <div id="bgcenter" style="background-image:url(images/body_02.png);"></div>
-    <div id="bgright" style="background-image:url(images/body_03.png);"></div>
-  </div>
-  <div id="bg_body">
-    <div id="bgleft" style="background-image:url(images/body_04.png);"></div>
-    <div id="bgcenter" style="background-color:#FFF;"></div>
-    <div id="bgright" style="background-image:url(images/body_06.png);"></div>
-  </div>
-  <div id="bg_foot">
-    <div id="bgleft" style="background-image:url(images/body_07.png);"></div>
-    <div id="bgcenter" style="background-image:url(images/body_08.png);"></div>
-    <div id="bgright" style="background-image:url(images/body_09.png);"></div>
-  </div>
-   <div style="text-align:center;"><font face="����">��Ȩ����</font>&nbsp;&copy;&nbsp;<font face="����">������ҵ��ѧ</font></div>
-  </div>
-  <div id="content">
-  <div id="content_top">
-   <div id="skin">
-     <div id="skincg" title="ֽ�ɻ�" style="background-color:#6db9f5;" onclick="javascript:setBackground('1','6db9f5');"></div>
-     <div id="skincg" title="�Ųʷ���" style="background-color:#0f82d2; margin-left:13px;" onclick="javascript:setBackground('2','0f82d2');"></div>
-     <div id="skincg" title="����ʱ��" style="background-color:#ff89b0; margin-left:26px;" onclick="javascript:setBackground('3','ff89b0');"></div>
-     <div id="skincg" title="���Ĵ���" style="background-color:#fece00; margin-left:39px;" onclick="javascript:setBackground('4','fece00');"></div>
-   </div>
-  </div>
-  <div id="content_head">
-    <iframe src="http://m.weather.com.cn/m/pn11/weather.htm?id=101110101T " width="490" height="50"  style="background-color:transparent;position:absolute;left:252px;top:80px;" allowTransparency="true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe>
-   <a href="../newversion.html" target="_self"><div style="position:absolute; top:5px; height:59px; width:217px; margin-left:380px; background-image:url(images/npuweb2.0.png);"></div></a>
-  </div>
-  <div id="content_body">
-    <div id="announce"><div id="list">
-    <a href="http://weibo.com/u/2876598300">��ӭ��ע�����󵼺����ٷ�΢��</a>
-    <a href="../newversion.html" target="_self" style="color:#0C6"><b>������������󵼺���2.0</b></a>
-	<a href="http://www.renren.com/601471272">��ӭ��ע�����󵼺������˹�����ҳ</a>
-    <script language="JavaScript">
-	//��������
-       var box=document.getElementById("list"),can=true;
-       box.innerHTML+=box.innerHTML;
-       box.onmouseover=function announce(){can=false};
-       box.onmouseout=function announce(){can=true};
-       new function announce(){
-        var stop=box.scrollTop%18==0&&!can;
-        if(!stop)box.scrollTop==parseInt(box.scrollHeight/2)?box.scrollTop=0:box.scrollTop++;
-        setTimeout(arguments.callee,box.scrollTop%18?10:3000);
-       };
-    </script>
-	</div>
-    </div>
-    <div id="search"><div id="searchlogo"></div>
-        <FORM name=f_g onsubmit=return(s_1())>
-<table width="100%" align="center" cellpadding="1" cellspacing="1">
-                <tr>
-                    <td width="540">
-<INPUT onblur="if (value ==''){value=''}" 
-onmouseover=this.focus() title='��������Ҫ���������ݣ�Ȼ��ѡ����Ӧ����������' 
-onfocus=this.select()
-size=30 name=key class="searchtext">
-                    <input name="Submit" type="button" onclick=s_1() value="�� ��" class="searchbtn1"> 
-                    <input name="Submit" type="button" onclick=s_2() value="Google"  class="searchbtn2">
-                    <input name="Submit" type="button" onclick=s_3() value="�� ��"  class="searchbtn3">                 
-					</td> 
-                 </tr>
-</table> </FORM>
- </div>
-    <div id="tools"> 
-	  <span><img src="images/tools_1.jpg">&nbsp;<a href="http://tools.360.cn/">ʵ�ò�ѯ</a></span>
-	  <span><a href="http://www.12306.cn/mormhweb/kyfw/ypcx/" class="toolsmall">����Ʊ</a></span>
-      <span><img src="images/tools_2.jpg">&nbsp;<a href="http://news.ifeng.com/">��Ϣ��Ѷ</a></span>
-      <span><a href="http://news.sohu.com/" class="toolsmall">�Ѻ�����</a></span>
-	  <span><img src="images/tools_3.jpg">&nbsp;<a href="http://mall.360.cn/">���Ϲ���</a></span>
-      <span><a href="http://www.taobao.com" class="toolsmall">�Ա�</a></span>
-      <span><img src="images/tools_4.jpg">&nbsp;<a href="http://tv.youku.com/">��&nbsp;��&nbsp;��</a></span>
-	  <span><a href="http://tv.youku.com/top/" class="toolsmall">����</a></span>
-	  <span><img src="images/tools_5.jpg">&nbsp;<a href="http://www.yinyuetai.com/">��&nbsp;&nbsp;&nbsp;&nbsp;��</a></span>
-	  <span><a href="http://music.douban.com/chart" class="toolsmall">��������</a></span>
-	  <span><img src="images/tools_6.jpg">&nbsp;<a href="http://www.4399.com/">С&nbsp;��&nbsp;Ϸ</a></span>
-	  <span><a href="http://www.7k7k.com/special/angrybirds/" class="toolsmall">��ŭ��С��</a></span>
-      <span><img src="images/tools_7.jpg">&nbsp;<a href="http://movie.youku.com/">��&nbsp;&nbsp;&nbsp;&nbsp;Ӱ</a></span>
-	  <span><a href="http://movie.douban.com/" class="toolsmall">�����Ӱ</a></span>
-      <span><img src="images/tools_8.jpg">&nbsp;<a href="http://www.uc999.com/">������Ϸ</a></span>
-	  <span><a href="http://games.sina.com.cn/" class="toolsmall">������Ϸ</a></span>
-    </div>
-    <div id="institution">   
-	<span><a href="http://www.nwpu.edu.cn/jgsz.htm" style="color:#1a4bc7"><b>ѧУ����</b></a></span>  
-	<span><a href="http://dangzheng.nwpu.edu.cn">�����칫��</a>
-	 <a href="http://zuzhibu.nwpu.edu.cn/">��֯��</a>
-	 <a href="http://news.nwpu.edu.cn/xcb">������</a>
-    </span>
-	<span><a href="http://fazhan.nwpu.edu.cn">��չ�ƻ���</a>
-	 <a href="http://jiaowu.nwpu.edu.cn">����</a>
-	 <a href="http://tushuguan.nwpu.edu.cn/">ͼ���</a>
-    </span>
-	<span><a href="http://guoji.nwpu.edu.cn/">���ʺ�����</a>
-	 <a href="http://xsc.stuclub.cn/">ѧ����</a>
-	 <a href="http://renshi.nwpu.edu.cn/">���´�</a>
-    </span>
-	<span><a href="http://jiwei.nwpu.edu.cn/">��ί�칫��</a>
-	 <a href="http://dangwei.nwpu.edu.cn/">���ص�ί</a>
-	 <a href="http://gonghui.nwpu.edu.cn/">����</a>
-    </span>
-	<span><a href="http://xsc.stuclub.cn/">ѧ��������</a>
-	 <a href="http://grs.nwpu.edu.cn/cn/index.jsp">�о���Ժ</a>
-	 <a href="http://youth.nwpu.edu.cn/">��ί</a>
-    </span>
-	<span><a href="http://keji.nwpu.edu.cn/">��ѧ������</a>
-	 <a href="http://guofang.nwpu.edu.cn/">�����Ƽ��о�Ժ</a>	
-    </span>
-	<span><a href="http://www.nwpu.edu.cn/xysz.htm" style="color:#1a4bc7"><b>ѧԺ��վ</b></a>
-     <a style="color:#777;font-size:12px;" href="javascript:schoolchange()" target="_self">[������ʾ��ʽ]</a>
-    </span>
-    <div id="schoolnew">
-	<span style="word-spacing:15px;"> 
-     <a href="http://hangkong.nwpu.edu.cn/" title="����ѧԺ">1Ժ</a>
-	 <a href="http://hangtian.nwpu.edu.cn/" title="����ѧԺ">2Ժ</a>
-	 <a href="http://hanghai.nwpu.edu.cn/" title="����ѧԺ">3Ժ</a>
-	 <a href="http://cailiao.nwpu.edu.cn/" title="����ѧԺ">4Ժ</a>
-    </span>
-	<span style="word-spacing:15px;">
-     <a href="http://jidian.nwpu.edu.cn/" title="����ѧԺ">5Ժ</a>
-	 <a href="http://tujian.nwpu.edu.cn/" title="��ѧ����ľ����ѧԺ">6Ժ</a>
-	 <a href="http://dongneng.nwpu.edu.cn/" title="��������ԴѧԺ">7Ժ</a>
-	 <a href="http://dianzi.nwpu.edu.cn/" title="������ϢѧԺ">8Ժ</a>
-    </span>
-	<span style="word-spacing:10px;">
-     <a href="http://zdhxy.nwpu.edu.cn/" title="�Զ���ѧԺ">9Ժ</a>
-	 <a href="http://jsj.nwpu.edu.cn/" title="�����ѧԺ">10Ժ</a>
-	 <a href="http://lxy.nwpu.edu.cn/" title="��ѧԺ">11Ժ</a>
-	 <a href="http://som.nwpu.edu.cn/" title="����ѧԺ">12Ժ</a>
-    </span>
-	<span style="word-spacing:8px;">
-     <a href="http://rwjj.nwpu.edu.cn/" title="�����뾭��ѧԺ">13Ժ</a>
-	 <a href="http://rjwdz.nwpu.edu.cn/" title="������΢����ѧԺ">14Ժ</a>
-	 <a href="http://shengming.nwpu.edu.cn/" title="����ѧԺ">15Ժ</a>
-	 <a href="http://jiaoyu.nwpu.edu.cn/" title="����ʵ��ѧԺ">JSԺ</a>
-    </span> 
-    </div>
-    <div id="schoolold">
-	<span style="word-spacing:2px;"> 
-     <a href="http://hangkong.nwpu.edu.cn/" title="����ѧԺ">����</a>
-	 <a href="http://hangtian.nwpu.edu.cn/" title="����ѧԺ">����</a>
-	 <a href="http://hanghai.nwpu.edu.cn/" title="����ѧԺ">����</a>
-	 <a href="http://cailiao.nwpu.edu.cn/" title="����ѧԺ">����</a>     
-     <a href="http://jidian.nwpu.edu.cn/" title="����ѧԺ">����</a>
-    </span>
-	<span style="word-spacing:1px;">
-	 <a href="http://tujian.nwpu.edu.cn/" title="��ѧ����ľ����ѧԺ">��ѧ����ľ����</a>
-	 <a href="http://dongneng.nwpu.edu.cn/" title="��������ԴѧԺ">��������Դ</a>
-    </span>
-	<span style="word-spacing:8px;">     
-	 <a href="http://dianzi.nwpu.edu.cn/" title="������ϢѧԺ">������Ϣ</a>
-     <a href="http://zdhxy.nwpu.edu.cn/" title="�Զ���ѧԺ">�Զ���</a>
-	 <a href="http://jsj.nwpu.edu.cn/" title="�����ѧԺ">�����</a>
-    </span>
-	<span style="word-spacing:8px;">
-	 <a href="http://lxy.nwpu.edu.cn/" title="��ѧԺ">��ѧԺ</a>
-	 <a href="http://som.nwpu.edu.cn/" title="����ѧԺ">����</a>
-     <a href="http://rwjj.nwpu.edu.cn/" title="�����뾭��ѧԺ">�����뾭��</a>
-    </span>
-	<span style="word-spacing:1px;"> 
-	 <a href="http://rjwdz.nwpu.edu.cn/" title="������΢����ѧԺ">������΢����</a>
-	 <a href="http://shengming.nwpu.edu.cn/" title="����ѧԺ">����</a>
-	 <a href="http://jiaoyu.nwpu.edu.cn/" title="����ʵ��ѧԺ">����ʵ��</a>
-    </span> 
-    </div>
-	</div>
-    <div id="main"> 
-	&nbsp;<span><a href="http://jw.nwpu.edu.cn">����ϵͳ</a></span> 
-	<span><a href="http://self.nwpu.edu.cn:8080/selfservice/">��ݲ�����</a></span> 
-	<span><a href="http://www.nwpu.edu.cn">��������ҳ</a></span> 
-	<span><a href="http://mail.nwpu.edu.cn">У԰����</a></span> 
-	<span><a href="http://cas.nwpu.edu.cn/cas">���ֹ���</a></span>
-	<span><a href="http://wangjiao.nwpu.edu.cn/info/1045/1096.htm">��ݿͻ���</a></span><br />
-	&nbsp;<span><a href="http://bbs.nwpu.edu.cn"><font color="#FF0000">�����ķ�BBS</font></a></span>  
-	<span><a href="http://pt.stuclub.cn"><font color="#FF0000">�ѹ�Ӣ PT</font></a></span>
-	<span><a href="freshmen/freshmen.html"><font color="#0099FF">����ָ��</font></a></span>
-	<span><a href="http://www.openlab.net.cn/">����ʵ����</a></span>
-	<span><a href="http://info.nwpu.edu.cn/structure/index">�� �� ��</a></span>
-	<span><a href="http://info.nwpu.edu.cn/structure/xngg/xngg_detail_209507_1.htm">У�ڳ��õ绰</a></span><br />
-	&nbsp;<span><a href="http://news.nwpu.edu.cn">������������</a></span>
-	<span><a href="http://g.wanfangdata.com.cn/">������</a></span>
-	<span><a href="http://bbs.yingjiesheng.com">Ӧ������̳</a></span>
-    <span><a href="http://124.114.130.149:7001/wscx/">����������</a></span>
-    <span><a href="http://jiaowu.nwpu.edu.cn/index/xxxl.htm" style="color:#00CC00">У ��</a></span>
-	<span><a href="job.html"><font color="#0099FF">��ְ��Ϣ</font></a></span><br />	
-	&nbsp;<span><a href="http://z.nwpu.edu.cn/bszn/xsbszn.htm" style="color:#00CC00">У�ڰ���ָ��</a></span>
-	<span><a href="http://www.12306.cn/mormhweb/kyfw/">����Ʊ</a></span>
-    <span><a href="http://www.ifeng.com/">��&nbsp;��&nbsp;��</a></span>
-    <span><a href="http://bt.neu6.edu.cn">��ά�ռ�</a></span>
-	<span><a href="http://202.117.85.5">�����ѯ</a></span>
-	<span><a href="http://www.xianjj.com/">����Υ�²�ѯ</a></span></div>
-    <div id="weblist1"><div style="left:45px; position:relative">
-	<b>У԰����</b>&nbsp;&nbsp;
-	<span><a href="http://job.nwpu.edu.cn/nwpujy/index.aspx">��ҵ��Ϣ��</a></span>
-    <span><a href="http://jpkc.nwpu.edu.cn/">��Ʒ�γ���</a></span>
-    <span><a href="http://news.nwpu.edu.cn/dsxwww/dsxww.htm">��������Ƶ��</a></span>
-    <span><a href="http://z.nwpu.edu.cn/dbxt/dzdbxt.htm">���Ӷ���ϵͳ</a></span>
-    <span><a href="http://222.24.199.227/vod/hvcs/index_frame.jsp">��Ƶ�㲥ϵͳ</a></span><br />
-	<b>��У��̳</b>&nbsp;&nbsp;
-	<span><a href="http://bbs.nwpu.edu.cn">�����ķ�BBS</a></span>
-	<span><a href="http://www.openlab.net.cn/">����ʵ����</a></span>
-	<span><a href="http://www.xiwai.com">������̳</a></span>
-	<span><a href="http://www.shidalu.cn/">��ʦ����̳</a></span>
-	<span><a href="http://bbs.xidian.edu.cn/">������������</a></span><br />
-	<b>�ٷ�΢��</b>&nbsp;&nbsp;
-	<span><a href="http://weibo.com/npustar">�������΢</a></span>
-	<span><a href="http://weibo.com/npunews">������������</a></span>
-	<span><a href="http://weibo.com/u/2081625645">������������</a></span>
-	<span><a href="http://weibo.com/nwpubbs">�����ķ�BBS</a></span>
-	<span><a href="http://weibo.com/u/2492255352">������У���ܻ�</a></span><br />
-	<b>������ҳ</b>&nbsp;&nbsp;
-	<span><a href="http://www.renren.com/601471272" style="color:#FF0000">�����󵼺���</a></span>
-	<span><a href="http://www.renren.com/360111847">У&nbsp;&nbsp;��</a></span>
-	<span><a href="http://page.renren.com/601100408">�����ķ�BBS</a></span>
-	<span><a href="http://page.renren.com/600925348">������ģ��</a></span>
-	<span><a href="http://page.renren.com/601289499">��ҵָ������</a></span></div>
-</div>
-	<div id="weblistlabel1"></div>
-	<div id="weblist2"><div style="left:45px; position:relative">
-	<b>PT����&nbsp;&nbsp;</b>&nbsp;&nbsp;
-	<span><a href="http://pt.stuclub.cn">�ѹ�ӢPT</a></span>
-	<span><a href="http://bt.neu6.edu.cn">��ά�ռ�</a></span>
-	<span><a href="http://ipv6.cgbt.cn/browse.php">���� BT</a></span>
-	<span><a href="http://bt.byr.cn/">��������̳</a></span>
-	<span><a href="http://pt.sjtu.edu.cn">���� PT</a></span><br />
-	<b>ѧϰ��Դ</b>&nbsp;&nbsp;
-	<span><a href="http://g.wanfangdata.com.cn/">������</a></span>
-	<span><a href="http://www.emuch.net">С ľ ��</a></span>
-	<span><a href="http://www.chinesejy.com/">������Դ</a></span>
-	<span><a href="http://www.nlc.gov.cn/">����ͼ���</a></span>
-	<span><a href="http://www.kaoshibaike.com/">���԰ٿ�</a></span><br />
-	<b>��ְ��Ƹ</b>&nbsp;&nbsp;
-	<span><a href="http://bbs.yingjiesheng.com">Ӧ������̳</a></span>
-	<span><a href="http://www.chinahr.com/">�л�Ӣ����</a></span>
-	<span><a href="http://www.zhaopin.com">������Ƹ</a></span>
-	<span><a href="http://www.51job.com">ǰ������</a></span>
-	<span><a href="http://www.ganji.com/zhaopin/">�ϼ�����Ƹ</a></span><br />
-	<b>���ò�ѯ</b>&nbsp;&nbsp;
-	<span><a href="http://124.114.130.149:7001/wscx/">����������</a></span>
-	<span><a href="http://www.xianjj.com/">����Υ��</a></span>
-	<span><a href="http://www.12306.cn/mormhweb/kyfw/ypcx/">����Ʊ</a></span>
-	<span><a href="http://www.kiees.cn/">�������</a></span>
-	<span><a href="http://www.ip138.com/">IP/�������</a></span></div>
-</div>
-	<div id="weblistlabel2"></div>
-	<div id="weblist3"><div style="left:45px; position:relative">
-	<b>�����ر�</b>&nbsp;&nbsp;
-	<span><a href="http://www.qq.com">�� Ѷ ��</a></span>
-	<span><a href="http://www.renren.com">�� �� ��</a></span>
-	<span><a href="http://weibo.com">����΢��</a></span>
-	<span><a href="http://www.youku.com/">��&nbsp;&nbsp;��</a></span>
-	<span><a href="http://fanyi.youdao.com/">�е�����</a></span><br />
-	<b>�������</b>&nbsp;&nbsp;
-	<span><a href="http://email.163.com/">��������</a></span>
-	<span><a href="http://cn.mail.yahoo.com/">�Ż�����</a></span>
-	<span><a href="http://www.gmail.com/">Gmail</a></span>
-	<span><a href="http://mail.sina.com.cn/">��������</a></span>
-	<span><a href="http://mail.qq.com/">QQ����</a></span><br />
-	<b>��������</b>&nbsp;&nbsp;
-	<span><a href="http://mp3.sogou.com/">�ѹ�����</a></span>
-	<span><a href="http://www.1ting.com/">һ������</a></span>
-	<span><a href="http://www.yinyuetai.com/">���� Tai</a></span>
-	<span><a href="http://www.qianqian.com">ǧǧ����</a></span>
-	<span><a href="http://mp3.baidu.com/">�ٶ� MP3</a></span><br />
-	<b>���Ϲ���</b>&nbsp;&nbsp;
-	<span><a href="http://www.taobao.com">�Ա�</a>&middot;<a href="http://www.tmall.com">��è</a></span>
-	<span><a href="http://www.paipai.com">����</a>&middot;<a href="http://shop.qq.com/">QQ�̳�</a></span>
-	<span><a href="http://www.vancl.com">���ͳ�Ʒ</a></span>
-	<span><a href="http://www.amazon.cn">׿Խ����ѷ</a></span>
-	<span><a href="http://www.360buy.com">�����̳�</a></span></div>
-</div>
-	<div id="weblistlabel3"></div>
-	<div id="weblist4"><div style="left:45px; position:relative">
-	<b>����ʱ��</b>&nbsp;&nbsp;
-	<span><a href="http://www.ifeng.com">�� �� ��</a></span>
-	<span><a href="http://www.chinanews.com/">�й�������</a></span>
-	<span><a href="http://www.xinhuanet.com/">�� �� ��</a></span>
-	<span><a href="http://www.people.com.cn/">�� �� ��</a></span>
-	<span><a href="http://news.sohu.com/">�Ѻ�����</a></span><br />
-	<b>����Ƶ��</b>&nbsp;&nbsp;
-	<span><a href="http://military.china.com/zh_cn/">�л�������</a></span>
-	<span><a href="http://www.miercn.com">�׶�������</a></span>
-	<span><a href="http://news.ifeng.com/mil/">��˾���</a></span>
-	<span><a href="http://www.qianyan001.com/">����ǰ��</a></span>
-	<span><a href="http://www.tiexue.net/">��Ѫ����</a></span><br />
-	<b>����С˵</b>&nbsp;&nbsp;
-	<span><a href="http://www.readnovel.com/">С˵�Ķ���</a></span>
-	<span><a href="http://www.qidian.com/">���������</a></span>
-	<span><a href="http://www.zongheng.com">�ݺ�������</a></span>
-	<span><a href="http://www.zhulang.com/">����С˵��</a></span>
-	<span><a href="http://www.hongxiu.com/">��������</a></span><br />
-	<b>������Ѷ</b>&nbsp;&nbsp;
-	<span><a href="http://sports.sina.com.cn/nba/">���� NBA</a></span>
-	<span><a href="http://www.hoopchina.com/">��������</a></span>
-	<span><a href="http://www.tianya.cn/bbs/">������̳</a></span>
-	<span><a href="http://www.guokr.com/">�� �� ��</a></span>
-	<span><a href="http://www.mop.com/">è&nbsp;&nbsp;��</a></span>
-	</div></div>
-	<div id="weblistlabel4"></div>
-    <div id="other"><div style="left:20px; position:relative">
-	<font color="#3942ff"><b>��������</b></font>
-	<a href="http://ie.sogou.com/">�ѹ������</a>
-	<a href="http://www.baofeng.com/">����Ӱ��</a>
-	<a href="http://im.qq.com/qq/all.shtml">��ѶQQ</a>
-	<a href="http://www.windowslive.cn/Messenger/">MSN</a>
-	<a href="http://xiuxiu.meitu.com/">��ͼ����</a>
-	<a href="http://download.pptv.com/">PPTV</a>
-	<a href="http://www.newhua.com/soft/5.htm">WinRAR</a>
-	<a href="http://pinyin.sogou.com/">�ѹ�ƴ��</a>
-	<a href="http://www.youhua.com/">�Ż���ʦ</a>
-	<a href="http://tv.sohu.com/ifox/?s=2008">�Ѻ�Ӱ��</a>
-	<a href="http://www.kugou.com/">�ṷ����</a><br />
-	<font color="#3942ff"><b>���ſ�վ</b></font>
-	<a href="http://www.90blog.org/">90����</a>
-	<a href="http://www.bilibili.tv/">��������</a>
-	<a href="http://u17.com/">������</a>
-	<a href="http://www.qiushibaike.com/">���°ٿ�</a>
-	<a href="http://www.haodewap.com/">�õ�wap</a>
-	<a href="http://songshuhui.net/">��ѧ�����</a>
-	<a href="http://trippanda.com/">��è����</a>
-	<a href="http://www.qdmm.com/">���Ů����</a>
-	<a href="http://weather.kuuke.com">�������</a>
-	<a href="http://www.u148.net/">����˼��</a><br />
-	<font color="#3942ff"><b>��Ϸר��</b></font>
-	<a href="http://www.warcraftchina.com/">ħ������</a>
-	<a href="http://www.17173.com/">17173</a>
-	<a href="http://www.tgbus.com/">�����ʿ</a>
-	<a href="http://www.5211game.com/">11��սƽ̨</a>
-	<a href="http://www.vsa.com.cn/">VS��սƽ̨</a>
-	<a href="http://web.sanguosha.com">����ɱ</a>
-	<a href="http://popkart.tiancity.com">���ܿ�����</a>
-	<a href="http://www.gamersky.com/">�����ǿ�</a>
-	<a href="http://arc.cngba.com/">�ֻ���Ϸ</a>
-	<a href="http://www.ali213.net/">������</a></div>
-	</div>
-	<!-- Baidu Button BEGIN -->
-<script type="text/javascript" id="bdshare_js" data="type=slide&amp;img=0" ></script>
-<script type="text/javascript" id="bdshell_js"></script>
-<script type="text/javascript">
-	document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + new Date().getHours();
-</script>
-<!-- Baidu Button END -->
-	<div id="footer">
-	<a href="http://weibo.com/u/2876598300"><img src="images/sinaweibo.jpg" border="0" />�ٷ�΢��</a>|
-	<a href="javascript:void(0);" onclick="SetHome(this,'http://www.npuweb.com/');" target="_self">��Ϊ��ҳ</a>|
-	<a href="http://bbs.nwpu.edu.cn/forum.php?mod=viewthread&tid=60721">Ͷ�߽���</a>|
-	<a href="http://bbs.nwpu.edu.cn/forum.php?mod=viewthread&tid=60721">�ύ����</a>|
-	<a href="about.html">���ڱ�վ</a></div>
-  </div>
-</div>
-<div id="luckybg"></div>
-<div style="background-image:url(images/logo.png);width:159px;height:100px;top:20px;margin-left:35px;position:absolute;"></div>
-<div id="zn"></div>
-<script type="text/javascript">
-var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F5cea39a9d6034ee1bc4ff99c6f0fbe92' type='text/javascript'%3E%3C/script%3E"));
-</script>
-</body>
-</html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>西工大导航网|西北工业大学导航网</title> 
+
+<meta name="keywords" content="西工大导航网,西工大,西工大导航,西北工业大学导航" />  
+
+<meta name="description" content="西工大导航网,西工大人自己的导航网站。西工大导航网收录了西北工业大学校内外的相关站点，下设校园生活、资源查询等分类，是值得每一个西工大人收藏的好网站。" /> 
+
+<link href="npu.css" rel="stylesheet" type="text/css" />
+
+<script language="JavaScript" src="npu.js"></script>
+
+<base target="_blank" />
+
+</head>
+
+<body onLoad="checkCookie();schoolCookie();">
+
+<div id="back_ground">
+
+  <div id="bg_top"></div>
+
+  <div id="bg_head">
+
+    <div id="bgleft" style="background-image:url(images/body_01.png);"></div>
+
+    <div id="bgcenter" style="background-image:url(images/body_02.png);"></div>
+
+    <div id="bgright" style="background-image:url(images/body_03.png);"></div>
+
+  </div>
+
+  <div id="bg_body">
+
+    <div id="bgleft" style="background-image:url(images/body_04.png);"></div>
+
+    <div id="bgcenter" style="background-color:#FFF;"></div>
+
+    <div id="bgright" style="background-image:url(images/body_06.png);"></div>
+
+  </div>
+
+  <div id="bg_foot">
+
+    <div id="bgleft" style="background-image:url(images/body_07.png);"></div>
+
+    <div id="bgcenter" style="background-image:url(images/body_08.png);"></div>
+
+    <div id="bgright" style="background-image:url(images/body_09.png);"></div>
+
+  </div>
+
+   <div style="text-align:center;"><font face="宋体">版权所有</font>&nbsp;&copy;&nbsp;<font face="宋体">西北工业大学</font></div>
+
+  </div>
+
+  <div id="content">
+
+  <div id="content_top">
+
+   <div id="skin">
+
+     <div id="skincg" title="纸飞机" style="background-color:#6db9f5;" onclick="javascript:setBackground('1','6db9f5');"></div>
+
+     <div id="skincg" title="炫彩方格" style="background-color:#0f82d2; margin-left:13px;" onclick="javascript:setBackground('2','0f82d2');"></div>
+
+     <div id="skincg" title="潮流时尚" style="background-color:#ff89b0; margin-left:26px;" onclick="javascript:setBackground('3','ff89b0');"></div>
+
+     <div id="skincg" title="龙的传人" style="background-color:#fece00; margin-left:39px;" onclick="javascript:setBackground('4','fece00');"></div>
+
+   </div>
+
+  </div>
+
+  <div id="content_head">
+
+    <iframe src="http://m.weather.com.cn/m/pn11/weather.htm?id=101110101T " width="490" height="50"  style="background-color:transparent;position:absolute;left:252px;top:80px;" allowTransparency="true" marginwidth="0" marginheight="0" hspace="0" vspace="0" frameborder="0" scrolling="no"></iframe>
+
+   <a href="../newversion.html" target="_self"><div style="position:absolute; top:5px; height:59px; width:217px; margin-left:380px; background-image:url(images/npuweb2.0.png);"></div></a>
+
+  </div>
+
+  <div id="content_body">
+
+    <div id="announce"><div id="list">
+
+    <a href="http://weibo.com/u/2876598300">欢迎关注西工大导航网官方微博</a>
+
+    <a href="../newversion.html" target="_self" style="color:#0C6"><b>点击体验西工大导航网2.0</b></a>
+
+	<a href="http://www.renren.com/601471272">欢迎关注西工大导航网人人公共主页</a>
+
+    <script language="JavaScript">
+
+	//滚动公告
+
+       var box=document.getElementById("list"),can=true;
+
+       box.innerHTML+=box.innerHTML;
+
+       box.onmouseover=function announce(){can=false};
+
+       box.onmouseout=function announce(){can=true};
+
+       new function announce(){
+
+        var stop=box.scrollTop%18==0&&!can;
+
+        if(!stop)box.scrollTop==parseInt(box.scrollHeight/2)?box.scrollTop=0:box.scrollTop++;
+
+        setTimeout(arguments.callee,box.scrollTop%18?10:3000);
+
+       };
+
+    </script>
+
+	</div>
+
+    </div>
+
+    <div id="search"><div id="searchlogo"></div>
+
+        <FORM name=f_g onsubmit=return(s_1())>
+
+<table width="100%" align="center" cellpadding="1" cellspacing="1">
+
+                <tr>
+
+                    <td width="540">
+
+<INPUT onblur="if (value ==''){value=''}" 
+
+onmouseover=this.focus() title='请输入您要搜索的内容，然后选择相应的搜索引擎' 
+
+onfocus=this.select()
+
+size=30 name=key class="searchtext">
+
+                    <input name="Submit" type="button" onclick=s_1() value="百 度" class="searchbtn1"> 
+
+                    <input name="Submit" type="button" onclick=s_2() value="Google"  class="searchbtn2">
+
+                    <input name="Submit" type="button" onclick=s_3() value="搜 狗"  class="searchbtn3">                 
+
+					</td> 
+
+                 </tr>
+
+</table> </FORM>
+
+ </div>
+
+    <div id="tools"> 
+
+	  <span><img src="images/tools_1.jpg">&nbsp;<a href="http://tools.360.cn/">实用查询</a></span>
+
+	  <span><a href="http://www.12306.cn/mormhweb/kyfw/ypcx/" class="toolsmall">火车余票</a></span>
+
+      <span><img src="images/tools_2.jpg">&nbsp;<a href="http://news.ifeng.com/">信息资讯</a></span>
+
+      <span><a href="http://news.sohu.com/" class="toolsmall">搜狐新闻</a></span>
+
+	  <span><img src="images/tools_3.jpg">&nbsp;<a href="http://mall.360.cn/">网上购物</a></span>
+
+      <span><a href="http://www.taobao.com" class="toolsmall">淘宝</a></span>
+
+      <span><img src="images/tools_4.jpg">&nbsp;<a href="http://tv.youku.com/">电&nbsp;视&nbsp;剧</a></span>
+
+	  <span><a href="http://tv.youku.com/top/" class="toolsmall">排行</a></span>
+
+	  <span><img src="images/tools_5.jpg">&nbsp;<a href="http://www.yinyuetai.com/">音&nbsp;&nbsp;&nbsp;&nbsp;乐</a></span>
+
+	  <span><a href="http://music.douban.com/chart" class="toolsmall">豆瓣排行</a></span>
+
+	  <span><img src="images/tools_6.jpg">&nbsp;<a href="http://www.4399.com/">小&nbsp;游&nbsp;戏</a></span>
+
+	  <span><a href="http://www.7k7k.com/special/angrybirds/" class="toolsmall">愤怒的小鸟</a></span>
+
+      <span><img src="images/tools_7.jpg">&nbsp;<a href="http://movie.youku.com/">电&nbsp;&nbsp;&nbsp;&nbsp;影</a></span>
+
+	  <span><a href="http://movie.douban.com/" class="toolsmall">豆瓣电影</a></span>
+
+      <span><img src="images/tools_8.jpg">&nbsp;<a href="http://www.uc999.com/">网络游戏</a></span>
+
+	  <span><a href="http://games.sina.com.cn/" class="toolsmall">新浪游戏</a></span>
+
+    </div>
+
+    <div id="institution">   
+
+	<span><a href="http://www.nwpu.edu.cn/jgsz.htm" style="color:#1a4bc7"><b>学校机构</b></a></span>  
+
+	<span><a href="http://dangzheng.nwpu.edu.cn">党政办公室</a>
+
+	 <a href="http://zuzhibu.nwpu.edu.cn/">组织部</a>
+
+	 <a href="http://news.nwpu.edu.cn/xcb">宣传部</a>
+
+    </span>
+
+	<span><a href="http://fazhan.nwpu.edu.cn">发展计划处</a>
+
+	 <a href="http://jiaowu.nwpu.edu.cn">教务处</a>
+
+	 <a href="http://tushuguan.nwpu.edu.cn/">图书馆</a>
+
+    </span>
+
+	<span><a href="http://guoji.nwpu.edu.cn/">国际合作处</a>
+
+	 <a href="http://xsc.stuclub.cn/">学生处</a>
+
+	 <a href="http://renshi.nwpu.edu.cn/">人事处</a>
+
+    </span>
+
+	<span><a href="http://jiwei.nwpu.edu.cn/">纪委办公室</a>
+
+	 <a href="http://dangwei.nwpu.edu.cn/">机关党委</a>
+
+	 <a href="http://gonghui.nwpu.edu.cn/">工会</a>
+
+    </span>
+
+	<span><a href="http://xsc.stuclub.cn/">学生工作部</a>
+
+	 <a href="http://grs.nwpu.edu.cn/cn/index.jsp">研究生院</a>
+
+	 <a href="http://youth.nwpu.edu.cn/">团委</a>
+
+    </span>
+
+	<span><a href="http://keji.nwpu.edu.cn/">科学技术处</a>
+
+	 <a href="http://guofang.nwpu.edu.cn/">国防科技研究院</a>	
+
+    </span>
+
+	<span><a href="http://www.nwpu.edu.cn/xysz.htm" style="color:#1a4bc7"><b>学院网站</b></a>
+
+     <a style="color:#777;font-size:12px;" href="javascript:schoolchange()" target="_self">[更改显示方式]</a>
+
+    </span>
+
+    <div id="schoolnew">
+
+	<span style="word-spacing:15px;"> 
+
+     <a href="http://hangkong.nwpu.edu.cn/" title="航空学院">1院</a>
+
+	 <a href="http://hangtian.nwpu.edu.cn/" title="航天学院">2院</a>
+
+	 <a href="http://hanghai.nwpu.edu.cn/" title="航海学院">3院</a>
+
+	 <a href="http://cailiao.nwpu.edu.cn/" title="材料学院">4院</a>
+
+    </span>
+
+	<span style="word-spacing:15px;">
+
+     <a href="http://jidian.nwpu.edu.cn/" title="机电学院">5院</a>
+
+	 <a href="http://tujian.nwpu.edu.cn/" title="力学与土木建筑学院">6院</a>
+
+	 <a href="http://dongneng.nwpu.edu.cn/" title="动力与能源学院">7院</a>
+
+	 <a href="http://dianzi.nwpu.edu.cn/" title="电子信息学院">8院</a>
+
+    </span>
+
+	<span style="word-spacing:10px;">
+
+     <a href="http://zdhxy.nwpu.edu.cn/" title="自动化学院">9院</a>
+
+	 <a href="http://jsj.nwpu.edu.cn/" title="计算机学院">10院</a>
+
+	 <a href="http://lxy.nwpu.edu.cn/" title="理学院">11院</a>
+
+	 <a href="http://som.nwpu.edu.cn/" title="管理学院">12院</a>
+
+    </span>
+
+	<span style="word-spacing:8px;">
+
+     <a href="http://rwjj.nwpu.edu.cn/" title="人文与经法学院">13院</a>
+
+	 <a href="http://rjwdz.nwpu.edu.cn/" title="软件与微电子学院">14院</a>
+
+	 <a href="http://shengming.nwpu.edu.cn/" title="生命学院">15院</a>
+
+	 <a href="http://jiaoyu.nwpu.edu.cn/" title="教育实验学院">JS院</a>
+
+    </span> 
+
+    </div>
+
+    <div id="schoolold">
+
+	<span style="word-spacing:2px;"> 
+
+     <a href="http://hangkong.nwpu.edu.cn/" title="航空学院">航空</a>
+
+	 <a href="http://hangtian.nwpu.edu.cn/" title="航天学院">航天</a>
+
+	 <a href="http://hanghai.nwpu.edu.cn/" title="航海学院">航海</a>
+
+	 <a href="http://cailiao.nwpu.edu.cn/" title="材料学院">材料</a>     
+
+     <a href="http://jidian.nwpu.edu.cn/" title="机电学院">机电</a>
+
+    </span>
+
+	<span style="word-spacing:1px;">
+
+	 <a href="http://tujian.nwpu.edu.cn/" title="力学与土木建筑学院">力学与土木建筑</a>
+
+	 <a href="http://dongneng.nwpu.edu.cn/" title="动力与能源学院">动力与能源</a>
+
+    </span>
+
+	<span style="word-spacing:8px;">     
+
+	 <a href="http://dianzi.nwpu.edu.cn/" title="电子信息学院">电子信息</a>
+
+     <a href="http://zdhxy.nwpu.edu.cn/" title="自动化学院">自动化</a>
+
+	 <a href="http://jsj.nwpu.edu.cn/" title="计算机学院">计算机</a>
+
+    </span>
+
+	<span style="word-spacing:8px;">
+
+	 <a href="http://lxy.nwpu.edu.cn/" title="理学院">理学院</a>
+
+	 <a href="http://som.nwpu.edu.cn/" title="管理学院">管理</a>
+
+     <a href="http://rwjj.nwpu.edu.cn/" title="人文与经法学院">人文与经法</a>
+
+    </span>
+
+	<span style="word-spacing:1px;"> 
+
+	 <a href="http://rjwdz.nwpu.edu.cn/" title="软件与微电子学院">软件与微电子</a>
+
+	 <a href="http://shengming.nwpu.edu.cn/" title="生命学院">生命</a>
+
+	 <a href="http://jiaoyu.nwpu.edu.cn/" title="教育实验学院">教育实验</a>
+
+    </span> 
+
+    </div>
+
+	</div>
+
+    <div id="main"> 
+
+	&nbsp;<span><a href="http://jw.nwpu.edu.cn">教务系统</a></span> 
+
+	<span><a href="http://self.nwpu.edu.cn:8080/selfservice/">锐捷查流量</a></span> 
+
+	<span><a href="http://www.nwpu.edu.cn">西工大主页</a></span> 
+
+	<span><a href="http://mail.nwpu.edu.cn">校园邮箱</a></span> 
+
+	<span><a href="http://cas.nwpu.edu.cn/cas">数字工大</a></span>
+
+	<span><a href="http://wangjiao.nwpu.edu.cn/info/1045/1096.htm">锐捷客户端</a></span><br />
+
+	&nbsp;<span><a href="http://bbs.nwpu.edu.cn"><font color="#FF0000">三航四方BBS</font></a></span>  
+
+	<span><a href="http://pt.stuclub.cn"><font color="#FF0000">蒲公英 PT</font></a></span>
+
+	<span><a href="freshmen/freshmen.html"><font color="#0099FF">新生指南</font></a></span>
+
+	<span><a href="http://www.openlab.net.cn/">开放实验室</a></span>
+
+	<span><a href="http://info.nwpu.edu.cn/structure/index">翱 翔 网</a></span>
+
+	<span><a href="http://info.nwpu.edu.cn/structure/xngg/xngg_detail_209507_1.htm">校内常用电话</a></span><br />
+
+	&nbsp;<span><a href="http://news.nwpu.edu.cn">西工大新闻网</a></span>
+
+	<span><a href="http://g.wanfangdata.com.cn/">万方数据</a></span>
+
+	<span><a href="http://bbs.yingjiesheng.com">应届生论坛</a></span>
+
+    <span><a href="http://124.114.130.149:7001/wscx/">西安公积金</a></span>
+
+    <span><a href="http://jiaowu.nwpu.edu.cn/index/xxxl.htm" style="color:#00CC00">校 历</a></span>
+
+	<span><a href="job.html"><font color="#0099FF">求职信息</font></a></span><br />	
+
+	&nbsp;<span><a href="http://z.nwpu.edu.cn/bszn/xsbszn.htm" style="color:#00CC00">校内办事指南</a></span>
+
+	<span><a href="http://www.12306.cn/mormhweb/kyfw/">订火车票</a></span>
+
+    <span><a href="http://www.ifeng.com/">凤&nbsp;凰&nbsp;网</a></span>
+
+    <span><a href="http://bt.neu6.edu.cn">六维空间</a></span>
+
+	<span><a href="http://202.117.85.5">财务查询</a></span>
+
+	<span><a href="http://www.xianjj.com/">西安违章查询</a></span></div>
+
+    <div id="weblist1"><div style="left:45px; position:relative">
+
+	<b>校园服务</b>&nbsp;&nbsp;
+
+	<span><a href="http://job.nwpu.edu.cn/nwpujy/index.aspx">就业信息网</a></span>
+
+    <span><a href="http://jpkc.nwpu.edu.cn/">精品课程网</a></span>
+
+    <span><a href="http://news.nwpu.edu.cn/dsxwww/dsxww.htm">西工大视频网</a></span>
+
+    <span><a href="http://z.nwpu.edu.cn/dbxt/dzdbxt.htm">电子读报系统</a></span>
+
+    <span><a href="http://222.24.199.227/vod/hvcs/index_frame.jsp">视频点播系统</a></span><br />
+
+	<b>高校论坛</b>&nbsp;&nbsp;
+
+	<span><a href="http://bbs.nwpu.edu.cn">三航四方BBS</a></span>
+
+	<span><a href="http://www.openlab.net.cn/">开放实验室</a></span>
+
+	<span><a href="http://www.xiwai.com">西外论坛</a></span>
+
+	<span><a href="http://www.shidalu.cn/">陕师大论坛</a></span>
+
+	<span><a href="http://bbs.xidian.edu.cn/">西电雁塔晨钟</a></span><br />
+
+	<b>官方微博</b>&nbsp;&nbsp;
+
+	<span><a href="http://weibo.com/npustar">西工大官微</a></span>
+
+	<span><a href="http://weibo.com/npunews">西工大新闻网</a></span>
+
+	<span><a href="http://weibo.com/u/2081625645">西工大招生办</a></span>
+
+	<span><a href="http://weibo.com/nwpubbs">三航四方BBS</a></span>
+
+	<span><a href="http://weibo.com/u/2492255352">西工大校友总会</a></span><br />
+
+	<b>公共主页</b>&nbsp;&nbsp;
+
+	<span><a href="http://www.renren.com/601471272" style="color:#FF0000">西工大导航网</a></span>
+
+	<span><a href="http://www.renren.com/360111847">校&nbsp;&nbsp;车</a></span>
+
+	<span><a href="http://page.renren.com/601100408">三航四方BBS</a></span>
+
+	<span><a href="http://page.renren.com/600925348">西工大模联</a></span>
+
+	<span><a href="http://page.renren.com/601289499">就业指导中心</a></span></div>
+
+</div>
+
+	<div id="weblistlabel1"></div>
+
+	<div id="weblist2"><div style="left:45px; position:relative">
+
+	<b>PT下载&nbsp;&nbsp;</b>&nbsp;&nbsp;
+
+	<span><a href="http://pt.stuclub.cn">蒲公英PT</a></span>
+
+	<span><a href="http://bt.neu6.edu.cn">六维空间</a></span>
+
+	<span><a href="http://ipv6.cgbt.cn/browse.php">晨光 BT</a></span>
+
+	<span><a href="http://bt.byr.cn/">北邮人论坛</a></span>
+
+	<span><a href="http://pt.sjtu.edu.cn">葡萄 PT</a></span><br />
+
+	<b>学习资源</b>&nbsp;&nbsp;
+
+	<span><a href="http://g.wanfangdata.com.cn/">万方数据</a></span>
+
+	<span><a href="http://www.emuch.net">小 木 虫</a></span>
+
+	<span><a href="http://www.chinesejy.com/">教育资源</a></span>
+
+	<span><a href="http://www.nlc.gov.cn/">国家图书馆</a></span>
+
+	<span><a href="http://www.kaoshibaike.com/">考试百科</a></span><br />
+
+	<b>求职招聘</b>&nbsp;&nbsp;
+
+	<span><a href="http://bbs.yingjiesheng.com">应届生论坛</a></span>
+
+	<span><a href="http://www.chinahr.com/">中华英才网</a></span>
+
+	<span><a href="http://www.zhaopin.com">智联招聘</a></span>
+
+	<span><a href="http://www.51job.com">前程无忧</a></span>
+
+	<span><a href="http://www.ganji.com/zhaopin/">赶集网招聘</a></span><br />
+
+	<b>常用查询</b>&nbsp;&nbsp;
+
+	<span><a href="http://124.114.130.149:7001/wscx/">西安公积金</a></span>
+
+	<span><a href="http://www.xianjj.com/">西安违章</a></span>
+
+	<span><a href="http://www.12306.cn/mormhweb/kyfw/ypcx/">火车余票</a></span>
+
+	<span><a href="http://www.kiees.cn/">快递物流</a></span>
+
+	<span><a href="http://www.ip138.com/">IP/号码归属</a></span></div>
+
+</div>
+
+	<div id="weblistlabel2"></div>
+
+	<div id="weblist3"><div style="left:45px; position:relative">
+
+	<b>上网必备</b>&nbsp;&nbsp;
+
+	<span><a href="http://www.qq.com">腾 讯 网</a></span>
+
+	<span><a href="http://www.renren.com">人 人 网</a></span>
+
+	<span><a href="http://weibo.com">新浪微博</a></span>
+
+	<span><a href="http://www.youku.com/">优&nbsp;&nbsp;酷</a></span>
+
+	<span><a href="http://fanyi.youdao.com/">有道翻译</a></span><br />
+
+	<b>免费邮箱</b>&nbsp;&nbsp;
+
+	<span><a href="http://email.163.com/">网易邮箱</a></span>
+
+	<span><a href="http://cn.mail.yahoo.com/">雅虎邮箱</a></span>
+
+	<span><a href="http://www.gmail.com/">Gmail</a></span>
+
+	<span><a href="http://mail.sina.com.cn/">新浪邮箱</a></span>
+
+	<span><a href="http://mail.qq.com/">QQ邮箱</a></span><br />
+
+	<b>流行音乐</b>&nbsp;&nbsp;
+
+	<span><a href="http://mp3.sogou.com/">搜狗音乐</a></span>
+
+	<span><a href="http://www.1ting.com/">一听音乐</a></span>
+
+	<span><a href="http://www.yinyuetai.com/">音悦 Tai</a></span>
+
+	<span><a href="http://www.qianqian.com">千千静听</a></span>
+
+	<span><a href="http://mp3.baidu.com/">百度 MP3</a></span><br />
+
+	<b>网上购物</b>&nbsp;&nbsp;
+
+	<span><a href="http://www.taobao.com">淘宝</a>&middot;<a href="http://www.tmall.com">天猫</a></span>
+
+	<span><a href="http://www.paipai.com">拍拍</a>&middot;<a href="http://shop.qq.com/">QQ商城</a></span>
+
+	<span><a href="http://www.vancl.com">凡客诚品</a></span>
+
+	<span><a href="http://www.amazon.cn">卓越亚马逊</a></span>
+
+	<span><a href="http://www.360buy.com">京东商城</a></span></div>
+
+</div>
+
+	<div id="weblistlabel3"></div>
+
+	<div id="weblist4"><div style="left:45px; position:relative">
+
+	<b>新闻时事</b>&nbsp;&nbsp;
+
+	<span><a href="http://www.ifeng.com">凤 凰 网</a></span>
+
+	<span><a href="http://www.chinanews.com/">中国新闻网</a></span>
+
+	<span><a href="http://www.xinhuanet.com/">新 华 网</a></span>
+
+	<span><a href="http://www.people.com.cn/">人 民 网</a></span>
+
+	<span><a href="http://news.sohu.com/">搜狐新闻</a></span><br />
+
+	<b>军事频道</b>&nbsp;&nbsp;
+
+	<span><a href="http://military.china.com/zh_cn/">中华网军事</a></span>
+
+	<span><a href="http://www.miercn.com">米尔军情网</a></span>
+
+	<span><a href="http://news.ifeng.com/mil/">凤凰军事</a></span>
+
+	<span><a href="http://www.qianyan001.com/">军事前沿</a></span>
+
+	<span><a href="http://www.tiexue.net/">铁血军事</a></span><br />
+
+	<b>网络小说</b>&nbsp;&nbsp;
+
+	<span><a href="http://www.readnovel.com/">小说阅读网</a></span>
+
+	<span><a href="http://www.qidian.com/">起点中文网</a></span>
+
+	<span><a href="http://www.zongheng.com">纵横中文网</a></span>
+
+	<span><a href="http://www.zhulang.com/">逐浪小说网</a></span>
+
+	<span><a href="http://www.hongxiu.com/">红袖添香</a></span><br />
+
+	<b>热门资讯</b>&nbsp;&nbsp;
+
+	<span><a href="http://sports.sina.com.cn/nba/">新浪 NBA</a></span>
+
+	<span><a href="http://www.hoopchina.com/">虎扑篮球</a></span>
+
+	<span><a href="http://www.tianya.cn/bbs/">天涯论坛</a></span>
+
+	<span><a href="http://www.guokr.com/">果 壳 网</a></span>
+
+	<span><a href="http://www.mop.com/">猫&nbsp;&nbsp;扑</a></span>
+
+	</div></div>
+
+	<div id="weblistlabel4"></div>
+
+    <div id="other"><div style="left:20px; position:relative">
+
+	<font color="#3942ff"><b>常用软件</b></font>
+
+	<a href="http://ie.sogou.com/">搜狗浏览器</a>
+
+	<a href="http://www.baofeng.com/">暴风影音</a>
+
+	<a href="http://im.qq.com/qq/all.shtml">腾讯QQ</a>
+
+	<a href="http://www.windowslive.cn/Messenger/">MSN</a>
+
+	<a href="http://xiuxiu.meitu.com/">美图秀秀</a>
+
+	<a href="http://download.pptv.com/">PPTV</a>
+
+	<a href="http://www.newhua.com/soft/5.htm">WinRAR</a>
+
+	<a href="http://pinyin.sogou.com/">搜狗拼音</a>
+
+	<a href="http://www.youhua.com/">优化大师</a>
+
+	<a href="http://tv.sohu.com/ifox/?s=2008">搜狐影音</a>
+
+	<a href="http://www.kugou.com/">酷狗音乐</a><br />
+
+	<font color="#3942ff"><b>热门酷站</b></font>
+
+	<a href="http://www.90blog.org/">90博客</a>
+
+	<a href="http://www.bilibili.tv/">嗶哩嗶哩</a>
+
+	<a href="http://u17.com/">有妖气</a>
+
+	<a href="http://www.qiushibaike.com/">糗事百科</a>
+
+	<a href="http://www.haodewap.com/">好的wap</a>
+
+	<a href="http://songshuhui.net/">科学松鼠会</a>
+
+	<a href="http://trippanda.com/">熊猫旅游</a>
+
+	<a href="http://www.qdmm.com/">起点女生网</a>
+
+	<a href="http://weather.kuuke.com">酷客天气</a>
+
+	<a href="http://www.u148.net/">有意思吧</a><br />
+
+	<font color="#3942ff"><b>游戏专区</b></font>
+
+	<a href="http://www.warcraftchina.com/">魔兽世界</a>
+
+	<a href="http://www.17173.com/">17173</a>
+
+	<a href="http://www.tgbus.com/">电玩巴士</a>
+
+	<a href="http://www.5211game.com/">11对战平台</a>
+
+	<a href="http://www.vsa.com.cn/">VS对战平台</a>
+
+	<a href="http://web.sanguosha.com">三国杀</a>
+
+	<a href="http://popkart.tiancity.com">跑跑卡丁车</a>
+
+	<a href="http://www.gamersky.com/">游民星空</a>
+
+	<a href="http://arc.cngba.com/">街机游戏</a>
+
+	<a href="http://www.ali213.net/">游侠网</a></div>
+
+	</div>
+
+	<!-- Baidu Button BEGIN -->
+
+<script type="text/javascript" id="bdshare_js" data="type=slide&amp;img=0" ></script>
+
+<script type="text/javascript" id="bdshell_js"></script>
+
+<script type="text/javascript">
+
+	document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + new Date().getHours();
+
+</script>
+
+<!-- Baidu Button END -->
+
+	<div id="footer">
+
+	<a href="http://weibo.com/u/2876598300"><img src="images/sinaweibo.jpg" border="0" />官方微博</a>|
+
+	<a href="javascript:void(0);" onclick="SetHome(this,'http://www.npuweb.com/');" target="_self">设为主页</a>|
+
+	<a href="http://bbs.nwpu.edu.cn/forum.php?mod=viewthread&tid=60721">投诉建议</a>|
+
+	<a href="http://bbs.nwpu.edu.cn/forum.php?mod=viewthread&tid=60721">提交链接</a>|
+
+	<a href="about.html">关于本站</a></div>
+
+  </div>
+
+</div>
+
+<div id="luckybg"></div>
+
+<div style="background-image:url(images/logo.png);width:159px;height:100px;top:20px;margin-left:35px;position:absolute;"></div>
+
+<div id="zn"></div>
+
+<script type="text/javascript">
+
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F5cea39a9d6034ee1bc4ff99c6f0fbe92' type='text/javascript'%3E%3C/script%3E"));
+
+</script>
+
+</body>
+
+</html>
+
